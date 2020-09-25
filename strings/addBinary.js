@@ -20,9 +20,7 @@ then convert those numbers to binary.
 
 // Other Solution
 
-function addBinary(a, b) {
-	return (a + b).toString(2);
-}
+const addBinary = (a, b) => (a + b).toString(2);
 
 console.log(addBinary(5, 5));
 console.log(addBinary(237, 656));
