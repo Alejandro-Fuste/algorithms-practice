@@ -9,19 +9,16 @@
 */
 
 // Create function that will take in a string as an argument
-function validateString(string) {
+const validateString = (string) => {
 	// Use ternary operator that will return 'invalid string' if any of the three conditions is true
 	// Conditions to check if data type is a string, if the string is empty, and if string contains only white spaces
 
-	let valid =
-		typeof string != 'string' || (string.length === 0) | /^\s*$/.test(string) ? 'Invalid String' : 'Valid String';
-
-	console.log(valid);
-
-	return valid;
-}
+	return typeof string != 'string' || string.length === 0 || /^\s*$/.test(string) ? 'Invalid String' : 'Valid String';
+};
 
 validateString('');
 validateString(8);
+validateString(null);
+validateString(undefined);
 validateString('  ');
 validateString('not empty');
