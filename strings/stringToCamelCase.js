@@ -24,14 +24,14 @@ function toCamelCase(str) {
 	//   valid input to ensure it's not an empty string
 	if (typeof str != 'string' || str.length === 0 || /^\s*$/.test(str)) return 'Invalid Input';
 	// create array variable to push splits
-	let toBeJoined = [];
+	let camelCasedWord = '';
 
 	//   split the string
 	const delimiter = /[-_]/g;
 	let splitParts = str.split(delimiter);
 
 	//   push the first character into new array
-	toBeJoined.push(splitParts[0]);
+	camelCasedWord += splitParts[0];
 
 	//   capitalize the first character after each delimiter
 	for (i = 1; i < splitParts.length; i++) {
@@ -55,15 +55,16 @@ function toCamelCase(str) {
 
 		// add the rest of the characters to the capitalized first letter
 		upperCaseWord += joinCharacters;
-		console.log(upperCaseWord);
+
+		// add upperCaseWord to final camelCasedWord variable
+		camelCasedWord += upperCaseWord;
 	}
 
-	//   push into new array
-	//   join array
 	//   return array
+	return camelCasedWord;
 }
 
 // console.log(toCamelCase(''));
-console.log(toCamelCase('the_stealth_warrior'));
-// console.log(toCamelCase('The-Stealth-Warrior'));
+// console.log(toCamelCase('the_stealth_warrior'));
+console.log(toCamelCase('The-Stealth-Warrior'));
 // console.log(toCamelCase('A-B-C'));
