@@ -20,6 +20,10 @@ Sample Tests:
 
 */
 
+/*
+
+My Solution
+
 function toCamelCase(str) {
 	//   valid input to ensure it's not an empty string
 	if (typeof str != 'string' || str.length === 0 || /^\s*$/.test(str)) return 'Invalid Input';
@@ -64,7 +68,14 @@ function toCamelCase(str) {
 	return camelCasedWord;
 }
 
-// console.log(toCamelCase(''));
+*/
+
+function toCamelCase(str) {
+	if (typeof str != 'string' || str.length === 0 || /^\s*$/.test(str)) return 'Invalid Input';
+	return str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+}
+
+console.log(toCamelCase(''));
 // console.log(toCamelCase('the_stealth_warrior'));
-console.log(toCamelCase('The-Stealth-Warrior'));
+// console.log(toCamelCase('The-Stealth-Warrior'));
 // console.log(toCamelCase('A-B-C'));
