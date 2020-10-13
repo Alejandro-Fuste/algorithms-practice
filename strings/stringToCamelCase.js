@@ -34,11 +34,28 @@ function toCamelCase(str) {
 	toBeJoined.push(splitParts[0]);
 
 	//   capitalize the first character after each delimiter
-	for (i = 1; i < toBeJoined.length; i++) {
-		// split the words that come after the first word
-		let splitWord = toBeJoined[i].split('');
+	for (i = 1; i < splitParts.length; i++) {
+		// declare variables
+		let upperCaseWord, wordSplitted, joinCharacters;
+		upperCaseWord = '';
+		wordSplitted = [];
+		joinCharacters = '';
 
-		//
+		// split the word
+		wordSplitted = splitParts[i].split('');
+
+		// capitalize first character
+		upperCaseWord = wordSplitted[0].toUpperCase();
+
+		// shift first character
+		wordSplitted.shift();
+
+		// join the characters
+		joinCharacters = wordSplitted.join('');
+
+		// add the rest of the characters to the capitalized first letter
+		upperCaseWord += joinCharacters;
+		console.log(upperCaseWord);
 	}
 
 	//   push into new array
@@ -48,5 +65,5 @@ function toCamelCase(str) {
 
 // console.log(toCamelCase(''));
 console.log(toCamelCase('the_stealth_warrior'));
-console.log(toCamelCase('The-Stealth-Warrior'));
+// console.log(toCamelCase('The-Stealth-Warrior'));
 // console.log(toCamelCase('A-B-C'));
