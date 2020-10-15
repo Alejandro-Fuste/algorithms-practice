@@ -27,7 +27,7 @@ Sample Tests:
 */
 
 function validParentheses(parens) {
-	return (/[()]+/ | /^\(\)$/).test(parens);
-}
+	const regex = /^n\(+/g;
 
-//   (/(^\(\)$)+/g
+	return regex.test(parens);
+}
