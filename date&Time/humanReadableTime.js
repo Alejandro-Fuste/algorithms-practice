@@ -22,3 +22,9 @@ Sample Tests:
   });
 
  */
+
+function humanReadable(integer) {
+	//  find the methood to covert seconds to time
+	// format the time
+	// return the formatted time
+}
