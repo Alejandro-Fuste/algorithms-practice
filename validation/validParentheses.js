@@ -27,12 +27,17 @@ Sample Tests:
 */
 
 function validParentheses(parens) {
-	const regex = /^\(+/g;
+	// const regex = /(^\(+)(?=\)*(?=\(*))\)$/g;
+	const regex = /(^\()/g;
 
 	return regex.test(parens);
 }
 
-console.log(validParentheses('('));
-console.log(validParentheses(')'));
-console.log(validParentheses('((((('));
-console.log(validParentheses(')))))'));
+console.log(validParentheses('(') + ' should be true');
+console.log(validParentheses(')') + ' should be false');
+
+// console.log(validParentheses('()') + ' should be true');
+// console.log(validParentheses('())') + ' should be false');
+// console.log(validParentheses('(()') + ' should be false');
+// console.log(validParentheses('()(') + ' should be false');
+// console.log(validParentheses('(())') + ' should be true');
