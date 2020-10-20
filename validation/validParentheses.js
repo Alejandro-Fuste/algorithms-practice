@@ -27,8 +27,11 @@ Sample Tests:
 */
 
 function validParentheses(parens) {
-	// const regex = /(^\(+)(?=\)*(?=\(*))\)$/g;
-	const regex = /(^\()/g;
+	const regex = /(^\(+)(?=\)*(?=\(*))\)$/g;
+	const openParen = (parens.match(/(\(+)/g) || []).length;
+	const closeParen = (parens.match(/(\)+)/g) || []).length;
+
+	console.log(openParen, closeParen);
 
 	return regex.test(parens);
 }
