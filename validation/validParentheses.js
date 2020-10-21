@@ -37,14 +37,14 @@ function validParentheses(parens) {
 	console.log(openParen, closeParen);
 
 	// return statement with test method && openParen === closeParen
-	return regex.test(parens);
+	return regex.test(parens) && openParen === closeParen;
 }
 
-console.log(validParentheses('(') + ' should be true');
+console.log(validParentheses('(') + ' should be false');
 console.log(validParentheses(')') + ' should be false');
 
-// console.log(validParentheses('()') + ' should be true');
-// console.log(validParentheses('())') + ' should be false');
-// console.log(validParentheses('(()') + ' should be false');
-// console.log(validParentheses('()(') + ' should be false');
-// console.log(validParentheses('(())') + ' should be true');
+console.log(validParentheses('())') + ' should be false');
+console.log(validParentheses('(()') + ' should be false');
+console.log(validParentheses('()(') + ' should be false');
+console.log(validParentheses('(())') + ' should be true');
+console.log(validParentheses('()') + ' should be true');
