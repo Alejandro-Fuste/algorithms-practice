@@ -27,17 +27,10 @@ Sample Tests:
 */
 
 function validParentheses(parens) {
-	// create regex variable to identify the correct sequence of parentheses
-	const regex = /(^\(+)(?=\)*(?=\(*))\)$/g;
-
-	// create variables to hold counts of open & closed parentheses
-	const openParen = (parens.match(/(\(+)/g) || []).length;
-	const closeParen = (parens.match(/(\)+)/g) || []).length;
-
-	console.log(openParen, closeParen);
-
-	// return statement with test method && openParen === closeParen
-	return regex.test(parens) && openParen === closeParen;
+	while (/\(\)/.test(parens)) {
+		parens = parens.replace(/\(\)/g, '');
+	}
+	return parens.length > 0 ? false : true;
 }
 
 console.log(validParentheses('(') + ' should be false');
