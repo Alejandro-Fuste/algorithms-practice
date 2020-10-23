@@ -23,8 +23,17 @@ Sample Tests:
 
  */
 
-function humanReadable(integer) {
+function humanReadable(seconds) {
+	// create a new Date object and pass in seconds
+	let dateObject = new Date();
+	console.log(dateObject);
+
 	//  find the methood to covert seconds to time
+
 	// format the time
 	// return the formatted time
+	return hours;
 }
+
+// console.log(humanReadable(0));
+// console.log(humanReadable(359999));
