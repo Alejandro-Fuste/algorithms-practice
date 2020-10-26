@@ -25,15 +25,19 @@ Sample Tests:
 
 function humanReadable(seconds) {
 	// create a new Date object and pass in seconds
-	let dateObject = new Date();
-	console.log(dateObject);
 
 	//  find the methood to covert seconds to time
 
 	// format the time
 	// return the formatted time
-	return hours;
+	if (seconds <= 86399) return new Date(seconds * 1000).toISOString().substr(11, 8);
+
+	if (seconds > 86399) {
+		return `${Math.floor(seconds / 3600000 * 1000).toString()}${new Date(seconds * 1000)
+			.toISOString()
+			.substr(13, 6)}`;
+	}
 }
 
-// console.log(humanReadable(0));
-// console.log(humanReadable(359999));
+console.log(humanReadable(0));
+console.log(humanReadable(359999));
