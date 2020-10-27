@@ -24,20 +24,25 @@ Sample Tests:
  */
 
 function humanReadable(seconds) {
-	// create a new Date object and pass in seconds
+	/* Format time equal to or less than 24 hours 
+	    -create a new Date object, pass in seconds, and multiply seconds by 1000 to get milliseconds
+	    -use the ISOString method to get time format
+        -use the substring method to remove everything except the time
+    */
 
-	//  find the methood to covert seconds to time
+	/* Format time greater than 24 hours
+        -Within a temperal literal string, use Math.floor and within it 
+         divide seconds by 3600000 and multiply by 1000
+        -Then use toString method to convert number to string
+        -Concatenate it with new Date and substring to get minutes and seconds
+    
+     */
 
-	// format the time
-	// return the formatted time
-	if (seconds <= 86399) return new Date(seconds * 1000).toISOString().substr(11, 8);
-
-	if (seconds > 86399) {
-		return `${Math.floor(seconds / 3600000 * 1000).toString()}${new Date(seconds * 1000)
-			.toISOString()
-			.substr(13, 6)}`;
-	}
+	return seconds <= 86399
+		? new Date(seconds * 1000).toISOString().substr(11, 8)
+		: `${Math.floor(seconds / 3600).toString()}${new Date(seconds * 1000).toISOString().substr(13, 6)}`;
 }
 
 console.log(humanReadable(0));
+console.log(humanReadable(86399));
 console.log(humanReadable(359999));
