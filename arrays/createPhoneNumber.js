@@ -27,7 +27,7 @@ My Solution:
 
 */
 
-// Refactored Solution
+// My Refactored Solution
 
 // use template literal to format numbers into phone numbers
 // use bracket syntax to get values from array
@@ -37,3 +37,11 @@ const createPhoneNumber = (numbers) =>
 console.log(createPhoneNumber([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ]));
 console.log(createPhoneNumber([ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]));
 console.log(createPhoneNumber([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ]));
+
+/* Other Solution
+
+function createPhoneNumber(n) {
+    return "(012) 345-6789".replace(/\d/g, d => n[d])
+  }
+
+  */
