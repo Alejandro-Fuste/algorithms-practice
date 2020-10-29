@@ -28,3 +28,13 @@ is_prime(-1) (false)
 
 
 */
+
+function isPrime(num) {
+	//TODO
+}
+
+console.log(isPrime(0));
+console.log(isPrime(1));
+console.log(isPrime(2));
+console.log(isPrime(73));
+console.log(isPrime(-1));
