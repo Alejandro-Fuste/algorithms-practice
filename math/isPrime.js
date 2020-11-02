@@ -30,7 +30,19 @@ is_prime(-1) (false)
 */
 
 function isPrime(num) {
-	//TODO
+	// Create variable to hold an array of divisors
+	let res = [];
+
+	// Use guard clause to return false for any negative integers
+	if (num < 2) return false;
+
+	// Use basic for loop to find divisors of an integer
+	for (var i = 2; i <= Math.floor(num / 2); ++i) if (num % i == 0) res.push(i);
+
+	// Need to create alternate loop for large numbers to prevent timeout
+
+	// Use length method to check if res variable is empty
+	return res.length === 0;
 }
 
 console.log(isPrime(0));
