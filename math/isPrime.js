@@ -39,8 +39,6 @@ function isPrime(num) {
 	// Use basic for loop to find divisors of an integer
 	for (var i = 2; i <= Math.floor(num / 2); ++i) if (num % i == 0) res.push(i);
 
-	// Need to create alternate loop for large numbers to prevent timeout
-
 	// Use length method to check if res variable is empty
 	return res.length === 0;
 }
@@ -50,3 +48,8 @@ console.log(isPrime(1));
 console.log(isPrime(2));
 console.log(isPrime(73));
 console.log(isPrime(-1));
+
+// Use binary search technigue to get a more efficient algorithm
+
+let currentElement;
+let currentIndex;
