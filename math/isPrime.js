@@ -53,3 +53,5 @@ console.log(isPrime(-1));
 
 let currentElement;
 let currentIndex;
+let maxIndex = Math.floor(num / 2);
+let minIndex = 2;
