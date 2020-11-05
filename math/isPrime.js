@@ -37,7 +37,10 @@ function isPrime(num) {
 	if (num < 2) return false;
 
 	// Use basic for loop to find divisors of an integer
-	for (var i = 2; i <= Math.floor(num / 2); ++i) if (num % i == 0) res.push(i);
+	// Use square root method 'sqrt()' to cut down the amount
+	// of numbers the loop will have to go through
+	// Use the floor method to round down
+	for (var i = 2; i <= Math.floor(Math.sqrt(num)); ++i) if (num % i == 0) res.push(i);
 
 	// Use length method to check if res variable is empty
 	return res.length === 0;
