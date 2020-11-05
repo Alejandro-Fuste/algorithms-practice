@@ -43,6 +43,7 @@ function isPrime(num) {
 	for (var i = 2; i <= Math.floor(Math.sqrt(num)); ++i) if (num % i == 0) res.push(i);
 
 	// Use length method to check if res variable is empty
+	// Empty array means the number is prime
 	return res.length === 0;
 }
 
