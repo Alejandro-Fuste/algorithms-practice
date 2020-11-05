@@ -48,10 +48,4 @@ console.log(isPrime(1));
 console.log(isPrime(2));
 console.log(isPrime(73));
 console.log(isPrime(-1));
-
-// Use binary search technigue to get a more efficient algorithm
-
-let currentElement;
-let currentIndex;
-let maxIndex = Math.floor(num / 2);
-let minIndex = 2;
+console.log(isPrime(1387821959));
