@@ -23,7 +23,8 @@ Sample Tests:
 */
 
 function domainName(url) {
-	//your code here
+	//Insert regex into split method to parse out the domain name
+	// Return domain name
 }
 
 console.log(domainName('http://google.com'));
