@@ -23,8 +23,11 @@ Sample Tests:
 */
 
 function domainName(url) {
-	//Insert regex into split method to parse out the domain name
+	// to parse out the domain name, insert regex into first argument and
+	// use empty string as second argument of replace method
 	// Return domain name
+
+	return url.replace();
 }
 
 console.log(domainName('http://google.com'));
