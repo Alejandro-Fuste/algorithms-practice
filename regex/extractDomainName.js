@@ -27,7 +27,7 @@ function domainName(url) {
 	// use empty string as second argument of replace method
 	// Return domain name
 
-	return url.replace(/(http:\/\/|https:\/\/|www\.)/g, '');
+	return url.replace(/(http:\/\/|https:\/\/|www\.)/g, '').split('.')[0];
 }
 
 console.log(domainName('http://google.com'));
