@@ -32,6 +32,7 @@ function domainName(url) {
 	return url.replace(/(http:\/\/|https:\/\/|www\.)/g, '').split('.')[0];
 }
 
+console.log('\x1b[33m%s\x1b[0m', 'Function Outputs:');
 console.log(domainName('http://google.com'));
 console.log(domainName('http://google.co.jp'));
 console.log(domainName('http://google.co.jp'));
