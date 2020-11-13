@@ -23,9 +23,11 @@ Sample Tests:
 */
 
 function domainName(url) {
-	// to parse out the domain name, insert regex into first argument and
+	// To parse out the domain name, insert regex into first argument and
 	// use empty string as second argument of replace method
-	// Return domain name
+	// Use split method with a period as the argument to split the url into
+	// an array
+	// Return the domain name using bracket notation with '0' inside the brackets
 
 	return url.replace(/(http:\/\/|https:\/\/|www\.)/g, '').split('.')[0];
 }
