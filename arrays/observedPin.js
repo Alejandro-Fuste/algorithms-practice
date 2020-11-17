@@ -1,4 +1,6 @@
-/*
+/* ******************************
+
+Instructions:
 
 Alright, detective, one of our colleagues successfully observed our target person, Robby the robber. 
 We followed him to a secret warehouse, where we assume to find all the stolen stuff. The door to 
@@ -39,10 +41,28 @@ Detective, we are counting on you!
 
 For C# user: Do not use Mono. Mono is too slower when run your code.
  
- */
+ ***********************/
 
 // My Solution
 
 function getPINs(observed) {
 	// TODO: This is your job, detective!
 }
+
+// Sample Tests:
+
+/*
+
+describe('example tests', function() {
+    var expectations = {
+      "8": ["5", "7", "8", "9", "0"],
+      "11": ["11", "22", "44", "12", "21", "14", "41", "24", "42"],
+      "369": ["339","366","399","658","636","258","268","669","668","266","369","398","256","296","259","368","638","396","238","356","659","639","666","359","336","299","338","696","269","358","656","698","699","298","236","239"]
+    };
+    
+    for (var pin in expectations) {
+      Test.assertSimilar(getPINs(pin).sort(), expectations[pin].sort(), 'PIN: ' + pin);
+    }
+  });
+
+  */
