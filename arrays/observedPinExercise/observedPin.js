@@ -23,8 +23,11 @@ function getPINs(observed) {
 	//
 
 	// Determine number subset combinations
+
+	return observedString;
 }
 
-console.log(getPINs('8'));
-console.log(getPINs('11'));
+// console.log(getPINs('8'));
+// console.log(getPINs('11'));
 console.log(getPINs('369'));
+console.log(getPINs(369));
