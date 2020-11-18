@@ -16,7 +16,12 @@ const alternatives = {
 };
 
 function getPINs(observed) {
+	// Ensure observed parameter is a string & then split the string
+	let observedString = observed.toString().split('');
 	// Determine number of permutations
+
+	//
+
 	// Determine number subset combinations
 }
 
