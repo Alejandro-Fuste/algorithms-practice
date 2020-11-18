@@ -1,7 +1,9 @@
 // My Solution
 
 function getPINs(observed) {
-	// TODO: This is your job, detective!
+	// Create object to hold number alternatives
+	// Determine number of permutations
+	// Determine number subset combinations
 }
 
 console.log(getPINs('8'));
