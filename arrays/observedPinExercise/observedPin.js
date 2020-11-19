@@ -18,20 +18,22 @@ const alternatives = {
 function getPINs(observed) {
 	// Ensure observed parameter is a string & then split the string
 	let observedString = observed.toString().split('');
-
+	console.log(observedString);
 	// Determine number of permutations
 	let permutations = observedString.reduce((total, currentValue) => total * alternatives[currentValue].length, 1);
-
+	console.log(permutations);
 	// Determine number subset combinations
-	let subset = observedString
-		.filter((c) => c != alternatives[0])
-		.reduce((total, currentValue) => total * alternatives[currentValue].length, 1);
+	observedString.shift();
 
-	return permutations;
+	let subset = observedString.reduce((total, currentValue) => total * alternatives[currentValue].length, 1);
+
+	return subset;
 }
 
 // console.log(getPINs('8'));
 // console.log(getPINs('11'));
 console.log(getPINs('369'));
 console.log(getPINs('11'));
-console.log(getPINs('20'));
+console.log(getPINs('33'));
+console.log(getPINs('973'));
+console.log(getPINs('4444'));
