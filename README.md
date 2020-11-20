@@ -9,7 +9,7 @@ Software developers need to constantly practice solving coding problems in order
 
 ```
 
-AS A software developers
+AS A software developer
 
 I WANT to practice coding
 
