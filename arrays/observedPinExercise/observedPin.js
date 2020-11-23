@@ -15,15 +15,16 @@ const alternatives = {
 	'0': [ '0', '8' ]
 };
 
-const reduceFunction = (total, currentValue) => total * alternatives[currentValue].length;
-
 function getPINs(observed) {
 	// Ensure observed parameter is a string, then split the string, then map to create an arrays of the
 	// alternatives
 	let observedAlternatives = observed.toString().split('').map((c) => alternatives[c]);
 
 	// Determine number of permutations
-	let permutations = observed.toString().split('').reduce(reduceFunction, 1);
+	let permutations = observed
+		.toString()
+		.split('')
+		.reduce((total, currentValue) => total * alternatives[currentValue].length, 1);
 	console.log(permutations);
 
 	return observedAlternatives;
