@@ -19,17 +19,22 @@ const reduceFunction = (total, currentValue) => total * alternatives[currentValu
 
 function getPINs(observed) {
 	// Ensure observed parameter is a string & then split the string
-	let observedString = observed.toString().split('');
-	console.log(observedString);
-	// Determine number of permutations
-	let permutations = observedString.reduce(reduceFunction, 1);
-	console.log(permutations);
-	// Determine number subset combinations
-	observedString.shift();
+	let observedString = observed.toString().split('').map((c) => alternatives[c]);
+	// console.log(observedString);
 
-	let subset = observedString.reduce(reduceFunction, 1);
+	// // Determine number of permutations
+	// let permutations = observedString.reduce(reduceFunction, 1);
+	// console.log(permutations);
+	// // Determine number subset combinations
+	// observedString.shift();
 
-	return subset;
+	// let subset = observedString.reduce(reduceFunction, 1);
+
+	// // Get the length of observed
+	// let characterCount = observed.length;
+	// console.log(`Character count: ${characterCount}`);
+
+	return observedString;
 }
 
 // console.log(getPINs('8'));
