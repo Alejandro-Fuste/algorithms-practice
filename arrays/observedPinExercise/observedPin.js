@@ -27,13 +27,14 @@ function getPINs(observed) {
 		.reduce((total, currentValue) => total * alternatives[currentValue].length, 1);
 	console.log(permutations);
 
-	return observedAlternatives;
+	return observedAlternatives
+		.reduce((a, b) => a.map((x) => b.map((y) => x.concat(y))).reduce((a, b) => a.concat(b), []), [ [] ])
+		.map((c) => c.join(''));
 }
 
-// console.log(getPINs('8'));
-// console.log(getPINs('11'));
+console.log(getPINs('8'));
 console.log(getPINs('369'));
 console.log(getPINs('11'));
 // console.log(getPINs('33'));
 // console.log(getPINs('973'));
-console.log(getPINs('4444'));
+// console.log(getPINs('4444'));
