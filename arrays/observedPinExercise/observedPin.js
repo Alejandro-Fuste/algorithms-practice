@@ -20,7 +20,7 @@ function getPINs(observed) {
 	// alternatives
 	let observedAlternatives = observed.toString().split('').map((c) => alternatives[c]);
 
-	// Determine number of permutations
+	// Determine number of permutations (not necessary to get list of alternatives)
 	let permutations = observed
 		.toString()
 		.split('')
