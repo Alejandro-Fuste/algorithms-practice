@@ -6,7 +6,8 @@
 */
 
 function pigIt(str) {
-	//Code here
+	// Split the str input
+	// Use substring to extract first letter
 }
 
 // Sample Tests
