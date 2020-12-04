@@ -7,7 +7,7 @@
 
 function pigIt(str) {
 	// Split the str input to create an array of words & store in variable
-	let splitArray = str.split('');
+	let splitArray = str.split(' ');
 	// Split each word to get an array of letters
 	// Use shift to extract first letter
 	// Push first letter to the end
@@ -18,6 +18,6 @@ function pigIt(str) {
 }
 
 // Sample Tests
-pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
-pigIt('Hello world !'); // elloHay orldway !
-pigIt('This is my string'); // 'hisTay siay ymay tringsay')
+console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay
+console.log(pigIt('Hello world !')); // elloHay orldway !
+console.log(pigIt('This is my string')); // 'hisTay siay ymay tringsay')
