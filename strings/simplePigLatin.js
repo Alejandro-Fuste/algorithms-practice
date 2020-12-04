@@ -6,7 +6,7 @@
 */
 
 function pigIt(str) {
-	// Split the str input to create an array of words
+	// Split the str input to create an array of words & store in variable
 	// Split each word to get an array of letters
 	// Use shift to extract first letter
 	// Push first letter to the end
