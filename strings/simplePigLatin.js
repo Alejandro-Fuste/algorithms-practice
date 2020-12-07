@@ -21,8 +21,11 @@ function pigIt(str) {
 		a[i].push(c.shift(), 'ay');
 	});
 
+	// With a map loop, push each word into finalPhrase variable
+	splitWord.map((c, i, a) => finalPhrase.push(c.join(' ')));
+
 	// Join all words into one string in return statement
-	return splitWord;
+	return finalPhrase;
 }
 
 // Sample Tests
