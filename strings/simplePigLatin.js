@@ -16,19 +16,21 @@ function pigIt(str) {
 		splitWord.push(element.split(''));
 	});
 
+	console.log(splitWord);
+
 	// With another forEach loop, use shift to extract first letter, push first letter & 'ay' to the end
 	splitWord.forEach((c, i, a) => {
 		a[i].push(c.shift(), 'ay');
 	});
 
-	// With a map loop, push each word into finalPhrase variable
-	splitWord.map((c, i, a) => finalPhrase.push(c.join(' ')));
+	// With another forEach loop, push each word into finalPhrase variable
+	splitWord.forEach((c, i, a) => finalPhrase.push(c.join('')));
 
 	// Join all words into one string in return statement
-	return finalPhrase;
+	return finalPhrase.join(' ');
 }
 
 // Sample Tests
-console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay
-// console.log(pigIt('Hello world !')); // elloHay orldway !
+// console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay
+console.log(pigIt('Hello world !')); // elloHay orldway !
 // console.log(pigIt('This is my string')); // 'hisTay siay ymay tringsay')
