@@ -16,8 +16,6 @@ function pigIt(str) {
 		splitWord.push(element.split(''));
 	});
 
-	console.log(splitWord);
-
 	// With another forEach loop, use shift to extract first letter, push first letter & 'ay' to the end
 	splitWord.forEach((c, i, a) => {
 		a[i].push(c.shift(), 'ay');
