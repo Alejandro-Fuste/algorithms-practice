@@ -18,7 +18,11 @@ function pigIt(str) {
 
 	// With another forEach loop, use shift to extract first letter, push first letter & 'ay' to the end
 	splitWord.forEach((c, i, a) => {
-		a[i].push(c.shift(), 'ay');
+		if (c.length <= 1 && /\W/g.test(c)) {
+			a[i].push(c);
+		} else {
+			a[i].push(c.shift(), 'ay');
+		}
 	});
 
 	// With another forEach loop, push each word into finalPhrase variable
