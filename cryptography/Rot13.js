@@ -15,7 +15,11 @@ Instructions:
 */
 
 function rot13(message) {
-	//your code here
+	//set up variables to hold arrays of uppercase & lowercase letters of alphabet
+	// split message to array of words
+	// split words to array of individual letters
+	// need to loop through letters and replace only letters...will need condition
+	// joined letters back together & return ciphered message
 }
 
 console.log(rot13('test'));
