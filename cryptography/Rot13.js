@@ -13,3 +13,10 @@ Instructions:
 
 
 */
+
+function rot13(message) {
+	//your code here
+}
+
+console.log(rot13('test'));
+console.log(rot13('Test'));
