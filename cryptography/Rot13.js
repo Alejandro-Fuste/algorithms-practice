@@ -15,7 +15,65 @@ Instructions:
 */
 
 function rot13(message) {
-	//set up variables to hold arrays of uppercase & lowercase letters of alphabet
+	//set up object to hold arrays of uppercase & lowercase letters of alphabet
+	const letters = {
+		lowerCase: [
+			'a',
+			'b',
+			'c',
+			'd',
+			'e',
+			'f',
+			'g',
+			'h',
+			'i',
+			'j',
+			'k',
+			'l',
+			'm',
+			'n',
+			'o',
+			'p',
+			'q',
+			'r',
+			's',
+			't',
+			'u',
+			'v',
+			'w',
+			'x',
+			'y',
+			'z'
+		],
+		uppercase: [
+			'A',
+			'B',
+			'C',
+			'D',
+			'E',
+			'F',
+			'G',
+			'H',
+			'I',
+			'J',
+			'K',
+			'L',
+			'M',
+			'N',
+			'O',
+			'P',
+			'Q',
+			'R',
+			'S',
+			'T',
+			'U',
+			'V',
+			'W',
+			'X',
+			'Y',
+			'Z'
+		]
+	};
 	// split message to array of words
 	// split words to array of individual letters
 	// need to loop through letters and replace only letters...will need condition
