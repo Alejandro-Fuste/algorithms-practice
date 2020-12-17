@@ -75,6 +75,8 @@ function rot13(message) {
 		]
 	};
 	// split message to array of words
+	const splitIntoWords = message.split(' ');
+	console.log(splitIntoWords);
 	// split words to array of individual letters
 	// need to loop through letters and replace only letters...will need condition
 	// joined letters back together & return ciphered message
