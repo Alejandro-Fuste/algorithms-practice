@@ -151,7 +151,14 @@ function rot13(message) {
 	let replaceLetters = splitIntoLetters.map((c) => c.replace(c, letters.lowerCaseCipher[c]));
 
 	// need condition to tell whether letter is uppercase or lowercase & push
-	// indexOf()
+	if (c === /\W/ || c === /\d/) {
+		// push if character is not a letter
+		finalLetters.push(c);
+	} else if (letters.lowerCase.indexOf(c) !== -1) {
+		// replace & push if lowercase letter
+	} else {
+		// replace & push uppercase letter
+	}
 
 	// joined letters back together & return ciphered message
 	return replaceLetters;
