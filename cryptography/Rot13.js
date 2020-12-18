@@ -14,6 +14,7 @@ Instructions:
 
 */
 
+//set up object to hold arrays of uppercase & lowercase letters of alphabet
 const letters = {
 	lowerCase: [
 		'a',
@@ -43,34 +44,34 @@ const letters = {
 		'y',
 		'z'
 	],
-	lowerCaseCipher: [
-		{ a: 'n' },
-		{ b: 'o' },
-		{ c: 'p' },
-		{ d: 'q' },
-		{ e: 'r' },
-		{ f: 's' },
-		{ g: 't' },
-		{ h: 'u' },
-		{ i: 'v' },
-		{ j: 'w' },
-		{ k: 'x' },
-		{ l: 'y' },
-		{ m: 'z' },
-		{ n: 'a' },
-		{ o: 'b' },
-		{ p: 'c' },
-		{ q: 'd' },
-		{ r: 'e' },
-		{ s: 'f' },
-		{ t: 'g' },
-		{ u: 'h' },
-		{ v: 'i' },
-		{ w: 'j' },
-		{ x: 'k' },
-		{ y: 'l' },
-		{ z: 'm' }
-	],
+	lowerCaseCipher: {
+		a: 'n',
+		b: 'o',
+		c: 'p',
+		d: 'q',
+		e: 'r',
+		f: 's',
+		g: 't',
+		h: 'u',
+		i: 'v',
+		j: 'w',
+		k: 'x',
+		l: 'y',
+		m: 'z',
+		n: 'a',
+		o: 'b',
+		p: 'c',
+		q: 'd',
+		r: 'e',
+		s: 'f',
+		t: 'g',
+		u: 'h',
+		v: 'i',
+		w: 'j',
+		x: 'k',
+		y: 'l',
+		z: 'm'
+	},
 	upperCase: [
 		'A',
 		'B',
@@ -99,78 +100,47 @@ const letters = {
 		'Y',
 		'Z'
 	],
-	upperCaseCipher: []
+	upperCaseCipher: {
+		A: 'N',
+		B: 'O',
+		C: 'P',
+		D: 'Q',
+		E: 'R',
+		F: 'S',
+		G: 'T',
+		H: 'U',
+		I: 'V',
+		J: 'W',
+		K: 'X',
+		L: 'Y',
+		M: 'Z',
+		N: 'A',
+		O: 'B',
+		P: 'C',
+		Q: 'D',
+		R: 'E',
+		S: 'F',
+		T: 'G',
+		U: 'H',
+		V: 'I',
+		W: 'J',
+		X: 'K',
+		Y: 'L',
+		Z: 'M'
+	}
 };
+/*
 
-for (i = 0; i < letters.lowerCase.length / 2; i++) {
-	letters.lowerCaseCipher.push({ [letters.lowerCase[i]]: `${letters.lowerCase[i + 13]}` });
+Loops to create ciphers
+for (i = 0; i < letters.upperCase.length / 2; i++) {
+	letters.upperCaseCipher.push({ letters.upperCasei]]: `${letters.upperCase[i + 13]}` });
 }
-for (i = 13; i < letters.lowerCase.length; i++) {
-	letters.lowerCaseCipher.push({ [letters.lowerCase[i]]: `${letters.lowerCase[i - 13]}` });
+for (i = 13; i < letters.upperCase.length; i++) {
+	letters.upperCaseCipher.push({ [letters.upperCase[i]]: `${letters.upperCase[i - 13]}` });
 }
-
-console.log(letters);
+*/
 
 function rot13(message) {
-	//set up object to hold arrays of uppercase & lowercase letters of alphabet
-	const letters = {
-		lowerCase: [
-			'a',
-			'b',
-			'c',
-			'd',
-			'e',
-			'f',
-			'g',
-			'h',
-			'i',
-			'j',
-			'k',
-			'l',
-			'm',
-			'n',
-			'o',
-			'p',
-			'q',
-			'r',
-			's',
-			't',
-			'u',
-			'v',
-			'w',
-			'x',
-			'y',
-			'z'
-		],
-		uppercase: [
-			'A',
-			'B',
-			'C',
-			'D',
-			'E',
-			'F',
-			'G',
-			'H',
-			'I',
-			'J',
-			'K',
-			'L',
-			'M',
-			'N',
-			'O',
-			'P',
-			'Q',
-			'R',
-			'S',
-			'T',
-			'U',
-			'V',
-			'W',
-			'X',
-			'Y',
-			'Z'
-		]
-	};
 	// split message to array of words
 	let splitIntoWords = message.split(' ');
 
@@ -183,5 +153,5 @@ function rot13(message) {
 	// joined letters back together & return ciphered message
 }
 
-// console.log(rot13('test'));
-// console.log(rot13('Test'));
+// console.log(rot13('test')) // output = "grfg";
+// console.log(rot13('Test')); // output = "Grfg";
