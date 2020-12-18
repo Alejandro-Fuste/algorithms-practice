@@ -14,6 +14,103 @@ Instructions:
 
 */
 
+const letters = {
+	lowerCase: [
+		'a',
+		'b',
+		'c',
+		'd',
+		'e',
+		'f',
+		'g',
+		'h',
+		'i',
+		'j',
+		'k',
+		'l',
+		'm',
+		'n',
+		'o',
+		'p',
+		'q',
+		'r',
+		's',
+		't',
+		'u',
+		'v',
+		'w',
+		'x',
+		'y',
+		'z'
+	],
+	lowerCaseCipher: [
+		{ a: 'n' },
+		{ b: 'o' },
+		{ c: 'p' },
+		{ d: 'q' },
+		{ e: 'r' },
+		{ f: 's' },
+		{ g: 't' },
+		{ h: 'u' },
+		{ i: 'v' },
+		{ j: 'w' },
+		{ k: 'x' },
+		{ l: 'y' },
+		{ m: 'z' },
+		{ n: 'a' },
+		{ o: 'b' },
+		{ p: 'c' },
+		{ q: 'd' },
+		{ r: 'e' },
+		{ s: 'f' },
+		{ t: 'g' },
+		{ u: 'h' },
+		{ v: 'i' },
+		{ w: 'j' },
+		{ x: 'k' },
+		{ y: 'l' },
+		{ z: 'm' }
+	],
+	upperCase: [
+		'A',
+		'B',
+		'C',
+		'D',
+		'E',
+		'F',
+		'G',
+		'H',
+		'I',
+		'J',
+		'K',
+		'L',
+		'M',
+		'N',
+		'O',
+		'P',
+		'Q',
+		'R',
+		'S',
+		'T',
+		'U',
+		'V',
+		'W',
+		'X',
+		'Y',
+		'Z'
+	],
+	upperCaseCipher: []
+};
+
+for (i = 0; i < letters.lowerCase.length / 2; i++) {
+	letters.lowerCaseCipher.push({ [letters.lowerCase[i]]: `${letters.lowerCase[i + 13]}` });
+}
+for (i = 13; i < letters.lowerCase.length; i++) {
+	letters.lowerCaseCipher.push({ [letters.lowerCase[i]]: `${letters.lowerCase[i - 13]}` });
+}
+
+console.log(letters);
+
 function rot13(message) {
 	//set up object to hold arrays of uppercase & lowercase letters of alphabet
 	const letters = {
@@ -80,9 +177,11 @@ function rot13(message) {
 	// split words to array of individual letters
 	let splitIntoLetters = splitIntoWords.map((c) => c.split(''));
 	return splitIntoLetters;
-	// need to loop through letters and replace only letters...will need condition
+	/* need to loop through letters and replace only letters...will need condition
+	let replaceLetters = splitIntoLetters.map(c => c.replace(c, ) */
+
 	// joined letters back together & return ciphered message
 }
 
-console.log(rot13('test'));
-console.log(rot13('Test'));
+// console.log(rot13('test'));
+// console.log(rot13('Test'));
