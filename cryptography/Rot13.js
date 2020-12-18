@@ -141,6 +141,9 @@ for (i = 13; i < letters.upperCase.length; i++) {
 */
 
 function rot13(message) {
+	// create variable to hold ciphered letters and characters
+	let finalLetters = [];
+
 	// split message to array of words
 	let splitIntoLetters = message.split('');
 
