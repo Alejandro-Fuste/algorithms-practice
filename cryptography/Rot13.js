@@ -144,9 +144,6 @@ function rot13(message) {
 	// split message to array of words
 	let splitIntoLetters = message.split('');
 
-	// split words to array of individual letters
-	// let splitIntoLetters = splitIntoWords.map((c) => c.split(''));
-
 	// need to loop through letters and replace only letters
 	let replaceLetters = splitIntoLetters.map((c) => c.replace(c, letters.lowerCaseCipher[c]));
 
