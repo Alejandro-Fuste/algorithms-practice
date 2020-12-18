@@ -142,16 +142,20 @@ for (i = 13; i < letters.upperCase.length; i++) {
 
 function rot13(message) {
 	// split message to array of words
-	let splitIntoWords = message.split(' ');
+	let splitIntoLetters = message.split('');
 
 	// split words to array of individual letters
-	let splitIntoLetters = splitIntoWords.map((c) => c.split(''));
-	return splitIntoLetters;
-	/* need to loop through letters and replace only letters...will need condition
-	let replaceLetters = splitIntoLetters.map(c => c.replace(c, ) */
+	// let splitIntoLetters = splitIntoWords.map((c) => c.split(''));
+
+	// need to loop through letters and replace only letters
+	let replaceLetters = splitIntoLetters.map((c) => c.replace(c, letters.lowerCaseCipher[c]));
+
+	// need condition to tell whether letter is uppercase or lowercase & push
+	// indexOf()
 
 	// joined letters back together & return ciphered message
+	return replaceLetters;
 }
 
-// console.log(rot13('test')) // output = "grfg";
-// console.log(rot13('Test')); // output = "Grfg";
+console.log(rot13('test')); // output = "grfg";
+console.log(rot13('Test')); // output = "Grfg";
