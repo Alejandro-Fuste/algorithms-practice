@@ -146,11 +146,12 @@ function rot13(message) {
 
 	// split message to array of words
 	let splitIntoLetters = message.split('');
+	console.log(splitIntoLetters);
 
 	// need to loop through letters and replace only letters
 	let replaceLetters = splitIntoLetters.forEach((c) => {
 		// need condition to tell whether letter is uppercase or lowercase & push
-		if (c === /\W/ || c === /\d/) {
+		if (/\W/.test(c) || /\d/.test(c)) {
 			// push if character is not a letter
 			finalLetters.push(c);
 		} else if (letters.lowerCase.indexOf(c) !== -1) {
@@ -166,5 +167,6 @@ function rot13(message) {
 	return finalLetters;
 }
 
-console.log(rot13('test')); // output = "grfg";
-console.log(rot13('Test')); // output = "Grfg";
+// console.log(rot13('test')); // output = "grfg";
+// console.log(rot13('Test')); // output = "Grfg";
+console.log(rot13('Test !')); // output = "Grfg !"
