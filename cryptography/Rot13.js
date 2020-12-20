@@ -140,43 +140,49 @@ for (i = 13; i < letters.upperCase.length; i++) {
 }
 */
 
-function rot13(message) {
-	// create variable to hold ciphered letters and characters
-	let finalLetters = [];
-
-	// split message to array of words
-	let splitIntoLetters = message.split('');
-
-	// need to loop through letters and replace only letters
-	let replaceLetters = splitIntoLetters.forEach((c) => {
-		if (/\W/.test(c) || /\d/.test(c)) {
-			// push if character is not a letter
-			finalLetters.push(c);
-		} else if (letters.lowerCase.indexOf(c) !== -1) {
-			// replace & push if lowercase letter
-			finalLetters.push(c.replace(c, letters.lowerCaseCipher[c]));
-		} else {
-			// replace & push uppercase letter
-			finalLetters.push(c.replace(c, letters.upperCaseCipher[c]));
-		}
-	});
-
-	// joined letters back together & return ciphered message
-	return finalLetters.join('');
-}
-
-console.log(rot13('test')); // output = "grfg";
-console.log(rot13('Test')); // output = "Grfg";
-console.log(rot13('Test !')); // output = "Grfg !"
-
-// Better Solution
-
 // function rot13(message) {
-//   var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-//   var b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
-//   return message.replace(/[a-z]/gi, c => b[a.indexOf(c)])
+// 	// create variable to hold ciphered letters and characters
+// 	let finalLetters = [];
+
+// 	// split message to array of words
+// 	let splitIntoLetters = message.split('');
+
+// 	// need to loop through letters and replace only letters
+// 	let replaceLetters = splitIntoLetters.forEach((c) => {
+// 		if (/\W/.test(c) || /\d/.test(c)) {
+// 			// push if character is not a letter
+// 			finalLetters.push(c);
+// 		} else if (letters.lowerCase.indexOf(c) !== -1) {
+// 			// replace & push if lowercase letter
+// 			finalLetters.push(c.replace(c, letters.lowerCaseCipher[c]));
+// 		} else {
+// 			// replace & push uppercase letter
+// 			finalLetters.push(c.replace(c, letters.upperCaseCipher[c]));
+// 		}
+// 	});
+
+// 	// joined letters back together & return ciphered message
+// 	return finalLetters.join('');
 // }
 
-// Best Solution
+// console.log(rot13('test')); // output = "grfg" time = 7.615ms
+// console.log(rot13('Test')); // output = "Grfg";
+// console.log(rot13('Test !')); // output = "Grfg !"
 
-// const rot13 = str => str.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13: -13)));
+// Shorter Solution
+
+// function rot13(message) {
+// 	var a = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// 	var b = 'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM';
+// 	return message.replace(/[a-z]/gi, (c) => b[a.indexOf(c)]);
+// }
+
+// console.log(rot13('test')); // output = "grfg" time = 11.12ms
+
+// Shortest Solution
+
+// const rot13 = (str) =>
+// 	str.replace(/[a-z]/gi, (letter) =>
+// 		String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13))
+// 	);
+// console.log(rot13('test')); // output = "grfg" time = 8.819ms;
