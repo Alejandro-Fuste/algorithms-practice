@@ -149,7 +149,6 @@ function rot13(message) {
 
 	// need to loop through letters and replace only letters
 	let replaceLetters = splitIntoLetters.forEach((c) => {
-		// need condition to tell whether letter is uppercase or lowercase & push
 		if (/\W/.test(c) || /\d/.test(c)) {
 			// push if character is not a letter
 			finalLetters.push(c);
