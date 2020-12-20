@@ -146,7 +146,6 @@ function rot13(message) {
 
 	// split message to array of words
 	let splitIntoLetters = message.split('');
-	console.log(splitIntoLetters);
 
 	// need to loop through letters and replace only letters
 	let replaceLetters = splitIntoLetters.forEach((c) => {
@@ -164,9 +163,21 @@ function rot13(message) {
 	});
 
 	// joined letters back together & return ciphered message
-	return finalLetters;
+	return finalLetters.join('');
 }
 
-// console.log(rot13('test')); // output = "grfg";
-// console.log(rot13('Test')); // output = "Grfg";
+console.log(rot13('test')); // output = "grfg";
+console.log(rot13('Test')); // output = "Grfg";
 console.log(rot13('Test !')); // output = "Grfg !"
+
+// Better Solution
+
+// function rot13(message) {
+//   var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//   var b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+//   return message.replace(/[a-z]/gi, c => b[a.indexOf(c)])
+// }
+
+// Best Solution
+
+// const rot13 = str => str.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13: -13)));
