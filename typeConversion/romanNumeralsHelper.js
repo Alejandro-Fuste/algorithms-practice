@@ -29,3 +29,5 @@ Help:
 
 console.log(RomanNumerals.toRoman(1000)); // 'M'
 console.log(RomanNumerals.toRoman(999)); // "CMXCIX"
+console.log(RomanNumerals.fromRoman('IV')); // 4
+console.log(RomanNumerals.fromRoman('MDCLXIX')); //1669
