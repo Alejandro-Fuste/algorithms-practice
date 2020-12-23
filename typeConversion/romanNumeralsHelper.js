@@ -23,5 +23,9 @@ Help:
 
 */
 
+// Create RomanNumerals class
+// add toRoman method to class
+// add fromRoman method to class
+
 console.log(RomanNumerals.toRoman(1000)); // 'M'
 console.log(RomanNumerals.toRoman(999)); // "CMXCIX"
