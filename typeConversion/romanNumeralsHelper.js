@@ -30,8 +30,10 @@ class RomanNumerals {
 
 	// add toRoman static method to class that takes in number
 	static toRoman(number) {}
+
+	// add fromRoman static method to class that takes in romanNumeral
+	static fromRoman(romanNumeral) {}
 }
-// add fromRoman method to class
 
 console.log(RomanNumerals.toRoman(1000)); // 'M'
 console.log(RomanNumerals.toRoman(999)); // "CMXCIX"
