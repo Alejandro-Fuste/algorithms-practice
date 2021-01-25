@@ -27,8 +27,10 @@ Help:
 class RomanNumerals {
 	// add constructor and pass in number and romanNumber
 	constructor(number, romanNumeral) {}
+
+	// add toRoman static method to class that takes in number
+	static toRoman(number) {}
 }
-// add toRoman method to class
 // add fromRoman method to class
 
 console.log(RomanNumerals.toRoman(1000)); // 'M'
