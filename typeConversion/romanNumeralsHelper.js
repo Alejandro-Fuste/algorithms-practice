@@ -24,8 +24,10 @@ Help:
 */
 
 // Create RomanNumerals class
-class RomanNumerals {}
-// add constructor and pass in number and romanNumber
+class RomanNumerals {
+	// add constructor and pass in number and romanNumber
+	constructor(number, romanNumeral) {}
+}
 // add toRoman method to class
 // add fromRoman method to class
 
