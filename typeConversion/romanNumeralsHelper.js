@@ -32,7 +32,9 @@ class RomanNumerals {
 	static toRoman(number) {}
 
 	// add fromRoman static method to class that takes in romanNumeral
-	static fromRoman(romanNumeral) {}
+	static fromRoman(romanNumeral) {
+		const romanNumerals = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+	}
 }
 
 console.log(RomanNumerals.toRoman(1000)); // 'M'
