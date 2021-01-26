@@ -31,6 +31,9 @@ class RomanNumerals {
 	// add toRoman static method to class that takes in number
 	static toRoman(number) {
 		const numbers = { 1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M' };
+
+		// added
+		const romanString = '';
 	}
 
 	// add fromRoman static method to class that takes in romanNumeral
@@ -39,6 +42,9 @@ class RomanNumerals {
 
 		// variable to hold array of numbers that will need to be sum
 		let sumNumbers = [];
+
+		// split romanNumeral into individual characters and loop through them
+		romanNumeral.split('').forEach((c, i) => {});
 	}
 }
 
