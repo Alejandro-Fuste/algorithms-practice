@@ -29,7 +29,9 @@ class RomanNumerals {
 	constructor(number, romanNumeral) {}
 
 	// add toRoman static method to class that takes in number
-	static toRoman(number) {}
+	static toRoman(number) {
+		const numbers = { 1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M' };
+	}
 
 	// add fromRoman static method to class that takes in romanNumeral
 	static fromRoman(romanNumeral) {
