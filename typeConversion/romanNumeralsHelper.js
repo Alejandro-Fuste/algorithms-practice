@@ -44,7 +44,9 @@ class RomanNumerals {
 		let sumNumbers = [];
 
 		// split romanNumeral into individual characters and loop through them
-		romanNumeral.split('').forEach((c, i) => {});
+		romanNumeral.split('').forEach((c, i) => {
+			// conditional statements to push first number, then add/subtract/push subsequent numbers
+		});
 
 		// use reduce method to return final number
 	}
