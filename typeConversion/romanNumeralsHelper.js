@@ -45,6 +45,8 @@ class RomanNumerals {
 
 		// split romanNumeral into individual characters and loop through them
 		romanNumeral.split('').forEach((c, i) => {});
+
+		// use reduce method to return final number
 	}
 }
 
