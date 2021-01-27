@@ -51,7 +51,6 @@ class RomanNumerals {
 			// conditional statements to push first number, then add/subtract/push subsequent numbers
 			if (c === 'M') {
 				sumNumbers.push(romanNumerals[c]);
-				input.shift();
 			} else if (romanNumerals[c] == romanNumerals[i + 1]) {
 				sumNumbers.push(romanNumerals[c]);
 			}
