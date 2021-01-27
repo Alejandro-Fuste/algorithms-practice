@@ -40,14 +40,19 @@ class RomanNumerals {
 	static fromRoman(romanNumeral) {
 		const romanNumerals = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 
+		// Split romanNumeral string and store it in a new varaibale
+		let input = romanNumeral.split('');
+
 		// variable to hold array of numbers that will need to be sum
 		let sumNumbers = [];
 
 		// split romanNumeral into individual characters and loop through them
-		romanNumeral.split('').forEach((c, i) => {
+		input.split('').forEach((c, i) => {
 			// conditional statements to push first number, then add/subtract/push subsequent numbers
 			if (romanNumerals[c] == romanNumerals[i + 1]) {
 				sumNumbers.push(romanNumerals[c]);
+			} else {
+				sumNumbers.push();
 			}
 		});
 
