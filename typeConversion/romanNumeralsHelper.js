@@ -49,7 +49,7 @@ class RomanNumerals {
 		// split romanNumeral into individual characters and loop through them
 		input.forEach((c, i) => {
 			// conditional statements to push first number, then add/subtract/push subsequent numbers
-			if (c === 'M') {
+			if (c === 'M' && i === 0) {
 				sumNumbers.push(romanNumerals[c]);
 			} else if (romanNumerals[c] == romanNumerals[i + 1]) {
 				sumNumbers.push(romanNumerals[c]);
