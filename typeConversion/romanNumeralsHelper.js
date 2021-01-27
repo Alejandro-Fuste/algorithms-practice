@@ -47,12 +47,13 @@ class RomanNumerals {
 		let sumNumbers = [];
 
 		// split romanNumeral into individual characters and loop through them
-		input.split('').forEach((c, i) => {
+		input.forEach((c, i) => {
 			// conditional statements to push first number, then add/subtract/push subsequent numbers
-			if (romanNumerals[c] == romanNumerals[i + 1]) {
+			if (c === 'M') {
 				sumNumbers.push(romanNumerals[c]);
-			} else {
-				sumNumbers.push();
+				input.shift();
+			} else if (romanNumerals[c] == romanNumerals[i + 1]) {
+				sumNumbers.push(romanNumerals[c]);
 			}
 		});
 
