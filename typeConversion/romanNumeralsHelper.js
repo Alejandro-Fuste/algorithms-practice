@@ -59,6 +59,9 @@ class RomanNumerals {
 		});
 
 		// use reduce method to return final number
+		return sumNumbers.reduce(function(total, num) {
+			return total + num;
+		}, 0);
 	}
 }
 
