@@ -46,6 +46,9 @@ class RomanNumerals {
 		// split romanNumeral into individual characters and loop through them
 		romanNumeral.split('').forEach((c, i) => {
 			// conditional statements to push first number, then add/subtract/push subsequent numbers
+			if (romanNumerals[c] == romanNumerals[i + 1]) {
+				sumNumbers.push(romanNumerals[c]);
+			}
 		});
 
 		// use reduce method to return final number
