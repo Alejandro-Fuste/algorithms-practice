@@ -38,12 +38,11 @@ class RomanNumerals {
 			3: { 1: 'C', 2: 'CC', 3: 'CCC', 4: 'CD', 5: 'D', 6: 'DC', 7: 'DCC', 8: 'DCCC', 9: 'CM' },
 			4: { 1: 'M', 2: 'MM', 3: 'MMM', 4: 'MMMM' }
 		};
+		// variable to concat string
+		const romanString = '';
 
 		// convert number to string & then split it
 		let stringifyNumber = number.toString().split('');
-
-		// added
-		const romanString = '';
 	}
 
 	// add fromRoman static method to class that takes in romanNumeral
