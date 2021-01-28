@@ -47,6 +47,8 @@ class RomanNumerals {
 		stringifyNumber.forEach(function(c, i) {
 			romanString += numberObj[stringifyNumber.length - i][+c];
 		});
+
+		return romanString;
 	}
 
 	// add fromRoman static method to class that takes in romanNumeral
