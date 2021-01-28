@@ -43,6 +43,8 @@ class RomanNumerals {
 
 		// convert number to string & then split it
 		let stringifyNumber = number.toString().split('');
+
+		stringifyNumber.forEach(function(c, i) {});
 	}
 
 	// add fromRoman static method to class that takes in romanNumeral
