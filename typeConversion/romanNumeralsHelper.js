@@ -57,6 +57,7 @@ class RomanNumerals {
 				sumNumbers.push(romanNumerals[c] + romanNumerals[input[i + 1]]);
 			} else if (romanNumerals[c] < romanNumerals[input[i + 1]]) {
 				sumNumbers.push(romanNumerals[input[i + 1]] - romanNumerals[c]);
+				input.splice([ i + 1 ], 1);
 			} else {
 				sumNumbers.push(romanNumerals[c]);
 			}
