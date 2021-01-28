@@ -53,7 +53,7 @@ class RomanNumerals {
 				sumNumbers.push(romanNumerals[c]);
 			} else if (romanNumerals[c] == romanNumerals[i + 1]) {
 				sumNumbers.push(romanNumerals[c]);
-			} else if (romanNumerals[c] > input[i + 1]) {
+			} else if (romanNumerals[c] > romanNumerals[input[i + 1]]) {
 				sumNumbers.push(romanNumerals[c] + romanNumerals[input[i + 1]]);
 			} else if (romanNumerals[c] < romanNumerals[input[i + 1]]) {
 				sumNumbers.push(romanNumerals[input[i + 1]] - romanNumerals[c]);
