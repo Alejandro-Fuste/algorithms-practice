@@ -33,6 +33,8 @@ class RomanNumerals {
 		const numbers = { 1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M' };
 		const multipliers = { 0: 1, 1: 1, 2: 10, 3: 100, 4: 1000 };
 
+		let stringifyNumber = number.toString().split('');
+
 		// added
 		const romanString = '';
 	}
