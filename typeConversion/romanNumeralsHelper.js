@@ -39,7 +39,7 @@ class RomanNumerals {
 			4: { 1: 'M', 2: 'MM', 3: 'MMM', 4: 'MMMM' }
 		};
 		// variable to concat string
-		const romanString = '';
+		let romanString = '';
 
 		// convert number to string & then split it
 		let stringifyNumber = number.toString().split('');
