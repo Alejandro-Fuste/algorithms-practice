@@ -45,6 +45,7 @@ class RomanNumerals {
 		let stringifyNumber = number.toString().split('');
 
 		stringifyNumber.forEach(function(c, i) {
+			if (+c === 0) return;
 			romanString += numberObj[stringifyNumber.length - i][+c];
 		});
 
