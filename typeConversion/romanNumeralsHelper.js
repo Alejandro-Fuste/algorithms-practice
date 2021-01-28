@@ -30,7 +30,6 @@ class RomanNumerals {
 
 	// add toRoman static method to class that takes in number
 	static toRoman(number) {
-		// const numbers = { 1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 'M' };
 		const numberObj = {
 			0: 0,
 			1: { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI', 7: 'VII', 8: 'VIII', 9: 'IX' },
