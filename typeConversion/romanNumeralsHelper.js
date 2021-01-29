@@ -94,3 +94,32 @@ console.log(RomanNumerals.fromRoman('IV')); // 4
 console.time('romanNumeral');
 console.log(RomanNumerals.fromRoman('MDCLXIX')); //1669
 console.timeEnd('romanNumeral');
+
+/*
+
+Better Solution
+
+function RomanNumerals() {
+}
+
+RomanNumerals.toRoman = function(n) {
+  var r1000 = ["","M","MM","MMM"][Math.floor(n/1000)];
+  var r100 = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"][Math.floor(n%1000/100)];
+  var r10 = ["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"][Math.floor(n%100/10)];
+  var r1 = ["","I","II","III","IV","V","VI","VII","VIII","IX"][Math.floor(n%10)];  
+  return r1000+r100+r10+r1
+};
+
+RomanNumerals.fromRoman = function(roman) {
+  var order='MDCLXVI'
+  var letters = {M:1000,D:500,C:100,L:50,X:10,V:5,I:1}
+  var sum = 0
+  for (var i=0; i<roman.length-1; i++) {
+    sum += (order.indexOf(roman[i]) > order.indexOf(roman[i+1]) ? -1 : 1)*letters[roman[i]]
+  }
+  sum += letters[roman[roman.length-1]]
+  return sum  
+}
+
+
+*/
