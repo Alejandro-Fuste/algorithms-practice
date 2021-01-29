@@ -87,6 +87,10 @@ class RomanNumerals {
 }
 
 console.log(RomanNumerals.toRoman(1000)); // 'M'
+console.time('toRoman');
 console.log(RomanNumerals.toRoman(999)); // "CMXCIX"
+console.timeEnd('toRoman');
 console.log(RomanNumerals.fromRoman('IV')); // 4
+console.time('romanNumeral');
 console.log(RomanNumerals.fromRoman('MDCLXIX')); //1669
+console.timeEnd('romanNumeral');
