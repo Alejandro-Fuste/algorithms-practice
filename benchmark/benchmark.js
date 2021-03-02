@@ -1,5 +1,5 @@
 // Bring in benchmark package and generate file
-const [ Benchmark, generate ] = [ require('benchmark'), require('../generate') ];
+const [ Benchmark, generate ] = [ require('benchmark'), require('./generate') ];
 
 // Generate an array of random numbers of the given length
 let length = 10000;
