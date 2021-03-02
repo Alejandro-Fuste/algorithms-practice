@@ -12,6 +12,34 @@ let randomValue = stuff[Math.ceil(Math.random() * length)];
 let suite = new Benchmark.Suite();
 
 suite
-	// Add the function you want to test to the suite
-	.add()
-	.on('start', () => console.log('Beginning benchmark...'));
+	.add('Linear Search', function linearSearch() {
+		for (i = 0; i < stuff.length; i++) {
+			if (stuff[i] === randomValue) {
+				return stuff[i];
+			}
+		}
+		return false;
+	})
+	.on('start', function start() {
+		console.log('Beginning benchmark...');
+	})
+	.on('complete', function report() {
+		// let benchmark = Benchmark.filter(this, 'successfull')[0];
+
+		console.log(`On average ${this[0].name} took ${this[0].stats.mean * 1000} milliseconds to complete.`);
+	})
+	// Run the test!
+	.run();
+
+// const Benchmark = require('benchmark');
+
+// const suite = new Benchmark.Suite();
+
+// suite
+// 	.add('random test', function() {
+// 		Math.floor(Math.random() * 10) + 1;
+// 	})
+// 	.on('complete', function() {
+// 		console.log(this);
+// 	})
+// 	.run();
