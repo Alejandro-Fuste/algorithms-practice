@@ -24,22 +24,7 @@ suite
 		console.log('Beginning benchmark...');
 	})
 	.on('complete', function report() {
-		// let benchmark = Benchmark.filter(this, 'successfull')[0];
-
 		console.log(`On average ${this[0].name} took ${this[0].stats.mean * 1000} milliseconds to complete.`);
 	})
 	// Run the test!
 	.run();
-
-// const Benchmark = require('benchmark');
-
-// const suite = new Benchmark.Suite();
-
-// suite
-// 	.add('random test', function() {
-// 		Math.floor(Math.random() * 10) + 1;
-// 	})
-// 	.on('complete', function() {
-// 		console.log(this);
-// 	})
-// 	.run();
