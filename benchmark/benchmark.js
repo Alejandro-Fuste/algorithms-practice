@@ -10,3 +10,8 @@ let randomValue = stuff[Math.ceil(Math.random() * length)];
 //    to execute and time
 
 let suite = new Benchmark.Suite();
+
+suite
+	// Add the function you want to test to the suite
+	.add()
+	.on('start', () => console.log('Beginning benchmark...'));
