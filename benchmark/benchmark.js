@@ -1,3 +1,1 @@
-const generate = require('../generate');
-
-console.log(generate(10));
+const [ Benchmark, generate ] = [ require('benchmark'), require('../generate') ];
