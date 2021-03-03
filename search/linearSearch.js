@@ -1,4 +1,4 @@
-const linearSearch = (array) => {
+const linearSearch = (array, randomValue) => {
 	for (i = 0; i < array.length; i++) {
 		if (array[i] === randomValue) {
 			return array[i];
