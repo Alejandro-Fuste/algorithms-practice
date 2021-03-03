@@ -1,19 +1,19 @@
 const data = [ 12, 23, 38, 40, 54, 62, 71, 87, 99 ];
 
 const binarySearch = (array, randomValue, left, right) => {
-	let middle = Math.floor((right + left) / 2);
+	let middle = Math.floor((left + right) / 2);
 
-	if (randomValue === array[middle]) {
-		console.log(`Found your number (${randomValue})`);
+	if (left > right) {
+		return -1;
+	} else if (randomValue === array[middle]) {
+		return middle;
 	} else if (randomValue < array[middle]) {
-		right = middle;
-		console.log(`Bring right down to ${right}`);
+		return binarySearch(array, randomValue, left, middle - 1);
 	} else if (randomValue > array[middle]) {
-		left = middle + 1;
-		console.log(`Bring left up to ${left}`);
+		return binarySearch(array, randomValue, middle + 1, right);
 	}
 };
 
-console.log(binarySearch(data, 54));
+console.log(binarySearch(data, 23, 0, data.length - 1));
 
-module.exports = binarySearch;
+// module.exports = binarySearch;
