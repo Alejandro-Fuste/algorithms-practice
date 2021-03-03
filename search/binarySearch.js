@@ -1,5 +1,3 @@
-const data = [ 12, 23, 38, 40, 54, 62, 71, 87, 99 ];
-
 const binarySearch = (array, randomValue, left, right) => {
 	let middle = Math.floor((left + right) / 2);
 
@@ -14,6 +12,4 @@ const binarySearch = (array, randomValue, left, right) => {
 	}
 };
 
-console.log(binarySearch(data, 23, 0, data.length - 1));
-
-// module.exports = binarySearch;
+module.exports = binarySearch;
