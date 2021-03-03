@@ -1,3 +1,5 @@
+// Binary search with recursion
+
 const binarySearch = (array, randomValue, left, right) => {
 	let middle = Math.floor((left + right) / 2);
 
