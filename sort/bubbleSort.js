@@ -4,7 +4,12 @@ const bubbleSort = (array) => {
 	while (!sorted) {
 		sorted = true;
 
-		for (i = 0; i < array.length - 1; i++) {}
+		for (i = 0; i < array.length - 1; i++) {
+			if (array[i] > array[i + 1]) {
+				// then swap
+				sorted = false;
+			}
+		}
 	}
 	return array;
 };
