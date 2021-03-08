@@ -9,7 +9,7 @@ const quickSort = (array) => {
 		} else right.push(i);
 	}
 
-	console.log(pivot, left, right);
+	return left + pivot + right;
 };
 // Push item in left variable if it's less than the pivot
 // Push item in right variable if it's greater than the pivot
