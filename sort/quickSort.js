@@ -3,7 +3,11 @@ const quickSort = (array) => {
 	const [ pivot, left, right ] = [ array[0], [], [] ];
 
 	// Loop through the array
-	for (i = 0; i < array.length; i++) {}
+	for (i = 0; i < array.length; i++) {
+		if (i < pivot) {
+			left.push(i);
+		} else right.push(i);
+	}
 
 	console.log(pivot, left, right);
 };
