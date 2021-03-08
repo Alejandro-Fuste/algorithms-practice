@@ -17,6 +17,6 @@ const bubbleSort = (array) => {
 	return array;
 };
 
-// module.exports = bubbleSort;
+module.exports = bubbleSort;
 
-console.log(bubbleSort([ 54, 8, 87, 88, 100, 98, 17, 72, 67, 42, 40, 34, 55, 18, 33, 94, 59, 68, 92, 2 ]));
+// console.log(bubbleSort([ 54, 8, 87, 88, 100, 98, 17, 72, 67, 42, 40, 34, 55, 18, 33, 94, 59, 68, 92, 2 ]));
