@@ -12,14 +12,10 @@ const quickSort = (array) => {
 		} else right.push(array[i]);
 	}
 
+	// Use recursion to sort left & right arrays
 	return quickSort(left).concat(pivot, quickSort(right));
 };
-// Push item in left variable if it's less than the pivot
-// Push item in right variable if it's greater than the pivot
 
-// Use recursion to repeat this process
-// Join left, pivot, right in return statement
+module.exports = quickSort;
 
-// module.exports = quickSort;
-
-console.log(quickSort([]));
+// console.log(quickSort([]));
