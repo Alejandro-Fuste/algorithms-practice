@@ -1,6 +1,8 @@
 // Bring in benchmark package and generate file
 const [ Benchmark, generate ] = [ require('benchmark'), require('./generate') ];
 
+const bubbleSort = require('../sort/bubbleSort');
+
 // Generate an array of random numbers of the given length
 let length = 10000;
 let stuff = generate(length);
@@ -13,13 +15,9 @@ let suite = new Benchmark.Suite();
 
 suite
 	// Add the function you want to test to the suite
-	.add('Linear Search', function linearSearch() {
-		for (i = 0; i < stuff.length; i++) {
-			if (stuff[i] === randomValue) {
-				return stuff[i];
-			}
-		}
-		return false;
+	.add('Bubble Sort', function() {
+		const testArray = [ ...stuff ];
+		bubbleSort(testArray);
 	})
 	// On 'start', run the 'start' function.
 	.on('start', function start() {
