@@ -2,9 +2,10 @@
 const [ Benchmark, generate ] = [ require('benchmark'), require('./generate') ];
 
 const bubbleSort = require('../sort/bubbleSort');
+const quickSort = require('../sort/quickSort');
 
 // Generate an array of random numbers of the given length
-let length = 10000;
+let length = 40000;
 let stuff = generate(length);
 let randomValue = stuff[Math.ceil(Math.random() * length)];
 
@@ -19,6 +20,10 @@ suite
 		const testArray = [ ...stuff ];
 		bubbleSort(testArray);
 	})
+	.add('Quick Sort', function() {
+		const testArray2 = [ ...stuff ];
+		quickSort(testArray2);
+	})
 	// On 'start', run the 'start' function.
 	.on('start', function start() {
 		console.log('Beginning benchmark...');
@@ -26,6 +31,7 @@ suite
 	// On 'complete' event, print the test's name and average time in milliseconds
 	.on('complete', function report() {
 		console.log(`On average ${this[0].name} took ${this[0].stats.mean * 1000} milliseconds to complete.`);
+		console.log(`On average ${this[1].name} took ${this[1].stats.mean * 1000} milliseconds to complete.`);
 	})
 	// Run the test!
 	.run();
