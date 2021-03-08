@@ -1,10 +1,9 @@
-// Choose first item in array as pivot
-// Create variables for left and right arrays
-
-// Loop through the array
-
 const quickSort = (array) => {
+	// Create variables for first item, left and right arrays
 	const [ pivot, left, right ] = [ array[0], [], [] ];
+
+	// Loop through the array
+	for (i = 0; i < array.length; i++) {}
 
 	console.log(pivot, left, right);
 };
@@ -14,4 +13,6 @@ const quickSort = (array) => {
 // Use recursion to repeat this process
 // Join left, pivot, right in return statement
 
-quickSort([ 0, 1 ]);
+module.exports = quickSort;
+
+// quickSort([ 0, 1 ]);
