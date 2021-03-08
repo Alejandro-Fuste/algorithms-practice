@@ -19,3 +19,5 @@ const quickSort = (array) => {
 module.exports = quickSort;
 
 // console.log(quickSort([]));
+
+// Big O = O(n log n)

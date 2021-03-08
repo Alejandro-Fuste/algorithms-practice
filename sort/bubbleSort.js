@@ -25,6 +25,8 @@ const bubbleSort = (array) => {
 
 module.exports = bubbleSort;
 
+// Big O = O(n2)
+
 // Check execution time with console.time
 // console.time('40k test');
 // console.log(bubbleSort(testArray));
