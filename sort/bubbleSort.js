@@ -1,3 +1,9 @@
+// const generate = require('../benchmark/generate');
+
+// const length = 40000;
+
+// const testArray = generate(length);
+
 const bubbleSort = (array) => {
 	let sorted = false;
 
@@ -19,4 +25,7 @@ const bubbleSort = (array) => {
 
 module.exports = bubbleSort;
 
-// console.log(bubbleSort([ 54, 8, 87, 88, 100, 98, 17, 72, 67, 42, 40, 34, 55, 18, 33, 94, 59, 68, 92, 2 ]));
+// Check execution time with console.time
+// console.time('40k test');
+// console.log(bubbleSort(testArray));
+// console.timeEnd('40k test');
