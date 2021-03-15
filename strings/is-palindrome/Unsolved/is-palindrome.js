@@ -3,7 +3,7 @@
 var isPalindrome = function(str) {
 	// Need variables to store original string and reversed string
 	let original = str;
-	let reversed;
 	// Need to split, reverse, and join str
+	let reversed = str.split('').reverse().join('');
 	// Return the comparison of both variables
 };
