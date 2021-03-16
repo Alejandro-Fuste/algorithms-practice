@@ -23,7 +23,6 @@ let factorial = function(num) {
 	for (i = 1; i < middle; i++) {
 		left *= i + 1;
 		right *= num - i;
-		console.log(left, right);
 	}
 	if (num === 0) return 1;
 	if (num % 2 != 0) return (middle + 1) * left * right;
