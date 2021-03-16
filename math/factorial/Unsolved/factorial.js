@@ -17,4 +17,6 @@ var factorial = function(num) {
 // use right and left variables to perform multiplication
 // from both ends
 
+let factorial = function(num) {};
+
 module.exports = factorial;
