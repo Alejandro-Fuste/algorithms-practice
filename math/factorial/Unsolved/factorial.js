@@ -8,6 +8,9 @@ var factorial = function(num) {
 	// Use for loop to pass in num as the conditional
 	for (i = 1; i <= num; i++) {
 		// multiple numbers inside loop
-		console.log(i);
+		total *= i;
 	}
+	return total;
 };
+
+console.log(factorial(4));
