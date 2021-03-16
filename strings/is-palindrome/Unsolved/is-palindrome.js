@@ -14,7 +14,7 @@
 // 	// removed variables and moved code to return statement
 
 // 	// Return the comparison of the str and reversed string
-// 	return str === [...str].reverse().join('');
+// 	return str === [ ...str ].reverse().join('');
 // };
 
 // different approach
@@ -44,3 +44,9 @@ var isPalindrome = function(str) {
 	}
 	return true;
 };
+
+module.exports = isPalindrome;
+
+// console.time('Reverse Method');
+// console.log(isPalindrome(`Madam, I'm Adam`));
+// console.timeEnd('Reverse Method');
