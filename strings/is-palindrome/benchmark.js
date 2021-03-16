@@ -12,6 +12,9 @@ const [ palindromeReverse, palindromeWhileLoop ] = [
 // let stuff = generate(length);
 // let randomValue = stuff[Math.ceil(Math.random() * length)];
 
+// Palindrome Test Case
+const palindromeTestCase = `Madam, I'm Adam`;
+
 // A "suite" is a series of code snippets you want
 //    to execute and time
 
