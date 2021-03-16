@@ -22,12 +22,12 @@ let suite = new Benchmark.Suite();
 
 suite
 	// Add the function you want to test to the suite
-	.add('Bubble Sort', function() {
-		const testArray = [ ...stuff ];
+	.add('Palindrome Reverse Method', function() {
+		const testArray = palindromeTestCase;
 		bubbleSort(testArray);
 	})
 	.add('Quick Sort', function() {
-		const testArray2 = [ ...stuff ];
+		const testArray2 = palindromeTestCase;
 		quickSort(testArray2);
 	})
 	// On 'start', run the 'start' function.

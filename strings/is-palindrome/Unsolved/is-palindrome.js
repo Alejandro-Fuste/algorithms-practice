@@ -14,7 +14,7 @@
 // 	// removed variables and moved code to return statement
 
 // 	// Return the comparison of the str and reversed string
-// 	return str === str.split('').reverse().join('');
+// 	return str === [...str].reverse().join('');
 // };
 
 // different approach
