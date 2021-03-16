@@ -17,6 +17,10 @@ let factorial = function(num) {
 // use right and left variables to perform multiplication
 // from both ends
 
-let factorial = function(num) {};
+let factorial = function(num) {
+	let [ left, right, middle ] = [ 1, num, Math.floor(num / 2) ];
+
+	for (i = 1; i < middle; i++) {}
+};
 
 module.exports = factorial;
