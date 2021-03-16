@@ -30,6 +30,4 @@ let factorial = function(num) {
 	return left * right;
 };
 
-console.log(factorial(7));
-
-// module.exports = factorial;
+module.exports = factorial;
