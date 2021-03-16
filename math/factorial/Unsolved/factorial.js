@@ -13,4 +13,8 @@ var factorial = function(num) {
 	return total;
 };
 
+// refractored solution
+// use right and left variables to perform multiplication
+// from both ends
+
 module.exports = factorial;
