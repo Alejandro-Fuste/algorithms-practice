@@ -1,13 +1,16 @@
 // Bring in benchmark package and generate file
 const [ Benchmark, generate ] = [ require('benchmark'), require('./generate') ];
 
-const palindrome1 = require('./Solved/is-palindrome');
-const palindrome2 = require('./Unsolved/is-palindrome');
+// Bring in files to be tested
+const [ palindromeReverse, palindromeWhileLoop ] = [
+	require('./Solved/is-palindrome'),
+	require('./Unsolved/is-palindrome')
+];
 
 // Generate an array of random numbers of the given length
-let length = 40000;
-let stuff = generate(length);
-let randomValue = stuff[Math.ceil(Math.random() * length)];
+// let length = 40000;
+// let stuff = generate(length);
+// let randomValue = stuff[Math.ceil(Math.random() * length)];
 
 // A "suite" is a series of code snippets you want
 //    to execute and time
