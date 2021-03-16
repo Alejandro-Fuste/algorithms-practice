@@ -24,11 +24,11 @@ suite
 	// Add the function you want to test to the suite
 	.add('Palindrome Reverse Method', function() {
 		const testArray = palindromeTestCase;
-		bubbleSort(testArray);
+		palindromeReverse(testArray);
 	})
-	.add('Quick Sort', function() {
+	.add('Palindrome While Loop', function() {
 		const testArray2 = palindromeTestCase;
-		quickSort(testArray2);
+		palindromeWhileLoop(testArray2);
 	})
 	// On 'start', run the 'start' function.
 	.on('start', function start() {
