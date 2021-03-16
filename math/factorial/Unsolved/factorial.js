@@ -13,4 +13,4 @@ var factorial = function(num) {
 	return total;
 };
 
-console.log(factorial(4));
+module.exports = factorial;
