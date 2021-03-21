@@ -22,11 +22,19 @@ let factorial = function(num) {
 
 	for (i = 1; i < middle; i++) {
 		left *= i + 1;
+		console.log(`left: ${left}`);
 		right *= num - i;
+		console.log(`right: ${right}`);
+		total = left * right;
+		console.log(`total: ${total}`);
 	}
 	if (num === 0) return 1;
-	if (num % 2 != 0) return (middle + 1) * left * right;
-	return left * right;
+	if (num % 2 != 0) return (middle + 1) * total;
+	return total;
 };
 
+console.log(factorial(7));
+
 module.exports = factorial;
+
+// if (num % 2 != 0) return (middle + 1) * left * right;
