@@ -33,8 +33,6 @@ let factorial = function(num) {
 	return total;
 };
 
-console.log(factorial(7));
-
 module.exports = factorial;
 
 // if (num % 2 != 0) return (middle + 1) * left * right;
