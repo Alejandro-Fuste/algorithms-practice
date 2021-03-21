@@ -36,8 +36,8 @@ suite
 	})
 	// On 'complete' event, print the test's name and average time in milliseconds
 	.on('complete', function report() {
-		console.log(`On average ${this[0].name} took ${this[0].stats.mean * 1000} seconds to complete.`);
-		console.log(`On average ${this[1].name} took ${this[1].stats.mean * 1000} seconds to complete.`);
+		console.log(`On average ${this[0].name} took ${this[0].stats.mean} milliseconds to complete.`);
+		console.log(`On average ${this[1].name} took ${this[1].stats.mean} milliseconds to complete.`);
 	})
 	// Run the test!
 	.run();
