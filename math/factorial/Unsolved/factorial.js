@@ -13,6 +13,25 @@
 // 	return total;
 // };
 
+// console.time('linear solution');
+// console.log(factorial(96));
+// console.timeEnd('linear solution');
+
+// Solved solution
+// var factorial = function(num) {
+// 	var result = 1;
+
+// 	for (var i = num; i > 1; i--) {
+// 		result = result * i;
+// 	}
+
+// 	return result;
+// };
+
+// console.time('solved linear solution');
+// console.log(factorial(96));
+// console.timeEnd('solved linear solution');
+
 // refractored solution
 // use right and left variables to perform multiplication
 // from both ends
@@ -22,16 +41,16 @@ let factorial = function(num) {
 
 	for (i = 1; i < middle; i++) {
 		left *= i + 1;
-		console.log(`left: ${left}`);
 		right *= num - i;
-		console.log(`right: ${right}`);
 		total = left * right;
-		console.log(`total: ${total}`);
 	}
 	if (num === 0) return 1;
 	if (num % 2 != 0) return (middle + 1) * total;
 	return total;
 };
+// console.time('log time solution');
+// console.log(factorial(96));
+// console.timeEnd('log time solution');
 
 module.exports = factorial;
 
