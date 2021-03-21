@@ -18,7 +18,7 @@
 // from both ends
 
 let factorial = function(num) {
-	let [ left, right, middle ] = [ 1, num, Math.floor(num / 2) ];
+	let [ left, right, middle, total ] = [ 1, num, Math.floor(num / 2), 1 ];
 
 	for (i = 1; i < middle; i++) {
 		left *= i + 1;
