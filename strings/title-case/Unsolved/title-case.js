@@ -7,7 +7,7 @@ var titleCase = function(str) {
 		console.log(c);
 	});
 
-	return str;
+	return newStr.join(' ');
 };
 
 console.log(titleCase('a lannister always pays his debts'));
