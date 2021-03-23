@@ -3,8 +3,7 @@
 var titleCase = function(str) {
 	let newStr = [];
 	str.split(' ').forEach((c) => {
-		console.log(c[0].toUpperCase());
-		console.log(c);
+		newStr.push(c.replace(/[a-z]/, (c) => c.toUpperCase()));
 	});
 
 	return newStr.join(' ');
