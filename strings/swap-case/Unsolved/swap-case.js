@@ -2,4 +2,8 @@
 
 var swapCase = function(str) {
 	let newStr = [];
+
+	return str.toUpperCase();
 };
+
+console.log(swapCase('Luke, I Am Your Father'));
