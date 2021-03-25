@@ -2,4 +2,8 @@
 
 var longestWord = function(str) {
 	let sortedString = str.split(' ');
+
+	return sortedString[0];
 };
+
+console.log(longestWord('i love programming'));
