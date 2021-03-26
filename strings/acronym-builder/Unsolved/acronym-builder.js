@@ -2,6 +2,8 @@
 
 var acronymBuilder = function(str) {
 	let acronym = '';
+
+	return acronym;
 };
 
 console.log(acronymBuilder('For your information'));
