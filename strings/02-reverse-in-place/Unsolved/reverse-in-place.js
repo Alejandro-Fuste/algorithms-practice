@@ -12,3 +12,5 @@ var reverseInPlace = function(arr) {
 
 	return arr;
 };
+
+console.log(reverseInPlace([ 2, 4, 6, 8 ]));
