@@ -6,7 +6,9 @@ var reverseInPlace = function(arr) {
 
 	arr.forEach(c, i, (a) => {
 		let temp = c;
-		arr[left + 1] = arr[right - 1];
-		arr[right - 1] = temp;
+		arr[left + i] = arr[right - i];
+		arr[right - i] = temp;
 	});
+
+	return arr;
 };
