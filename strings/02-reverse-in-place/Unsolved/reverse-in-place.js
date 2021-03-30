@@ -4,11 +4,14 @@
 var reverseInPlace = function(arr) {
 	let [ left, right ] = [ 0, arr.length - 1 ];
 
-	arr.forEach(c, i, (a) => {
-		let temp = c;
-		arr[left + i] = arr[right - i];
-		arr[right - i] = temp;
-	});
+	while (left < right) {
+		let temp = arr[left];
+		arr[left] = arr[right];
+		arr[right] = temp;
+
+		left++;
+		right--;
+	}
 
 	return arr;
 };
