@@ -2,5 +2,11 @@
 // You may NOT use the built-in reverse method
 
 var reverseInPlace = function(arr) {
-	arr.forEach(c, i, (a) => {});
+	let [ left, right ] = [ 0, arr.length - 1 ];
+
+	arr.forEach(c, i, (a) => {
+		let temp = c;
+		arr[left + 1] = arr[right - 1];
+		arr[right - 1] = temp;
+	});
 };
