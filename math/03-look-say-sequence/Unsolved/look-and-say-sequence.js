@@ -3,7 +3,15 @@
 var lookAndSay = function(n) {
 	let [ count, result, converted ] = [ 1, '', n.toString().split('') ];
 
-	console.log(converted);
+	converted.forEach((c, i, a) => {
+		if (c === a[i + 1]) {
+			count++;
+			result += count;
+			result += c;
+		}
+	});
 
 	return parseInt(result);
 };
+
+console.log(lookAndSay(5442));
