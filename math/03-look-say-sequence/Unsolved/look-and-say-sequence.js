@@ -8,6 +8,8 @@ var lookAndSay = function(n) {
 			count++;
 			result += count;
 			result += c;
+		} else {
+			result += `1${c}`;
 		}
 	});
 
