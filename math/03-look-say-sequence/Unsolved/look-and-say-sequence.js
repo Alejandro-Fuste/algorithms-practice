@@ -6,9 +6,10 @@ var lookAndSay = function(n) {
 	converted.forEach((c, i, a) => {
 		if (c === a[i + 1]) {
 			count++;
+		} else {
 			result += count;
 			result += c;
-		} else {
+			count = 1;
 			result += `1${c}`;
 		}
 	});
