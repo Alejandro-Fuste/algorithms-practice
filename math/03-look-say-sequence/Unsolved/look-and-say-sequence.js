@@ -2,4 +2,6 @@
 
 var lookAndSay = function(n) {
 	let [ count, result ] = [ 1, '' ];
+
+	return parseInt(result);
 };
