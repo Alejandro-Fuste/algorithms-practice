@@ -4,13 +4,15 @@ var lookAndSay = function(n) {
 	let [ count, result, converted ] = [ 1, '', n.toString().split('') ];
 
 	converted.forEach((c, i, a) => {
-		if (c === a[i + 1]) {
+		let currentDigit = c;
+		let digit = a[i + 1];
+		if (currentDigit === digit) {
 			count++;
 		} else {
 			result += count;
-			result += c;
+			result += currentDigit;
 			count = 1;
-			result += `1${c}`;
+			currentDigit = digit;
 		}
 	});
 
