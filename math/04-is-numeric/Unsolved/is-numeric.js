@@ -3,23 +3,30 @@
 var isNumeric = function(str) {
 	// setup object to hold array for digits and special characters
 	let characters = {
-		numbers: [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ],
-		specialCharacters: [ '.', '+', '-' ],
-		count: 0
+		allCharacters: [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '+', '-' ],
+		operators: [ '+', '-' ],
+		decimal: [ '.' ],
+		operatorCount: 0,
+		decimalCount: 0,
+		outcome: true
 	};
 
-	let { numbers, specialCharacters, count } = characters;
+	let { allCharacters, operators, operatorCount, decimal, decimalCount, outcome } = characters;
 	// split and loop through
 	str.split('').forEach((c) => {
-		// use indexof to find numbers in array
-		if (numbers.indexOf(c) === -1) return false;
-		// use indexof to increase count variable
-		if (specialCharacters.indexOf(c) != -1) count++;
+		// use indexof to find allCharacters in array
+		if (allCharacters.indexOf(c) === -1) return false;
+		// use indexof to increase operatorCount variable
+		if (operators.indexOf(c) != -1) operatorCount++;
+		if (decimal.indexOf(c) != -1) decimalCount++;
 	});
 
 	// return false if more than one special character
-	if (count > 1) return false;
+	if (decimalCount > 1 || operatorCount > 1) outcome = false;
 
 	// return true if both conditions are false
-	return true;
+	return outcome;
 };
+
+console.log(isNumeric('-0123.00')); // => true
+console.log(isNumeric('+-a13')); // => false
