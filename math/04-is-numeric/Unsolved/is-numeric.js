@@ -11,12 +11,12 @@ var isNumeric = function(str) {
 	let { numbers, specialCharacters, count } = characters;
 	// split and loop through
 	str.split('').forEach((c) => {
+		// use indexof to find numbers in array
 		if (numbers.indexOf(c) === -1) return false;
+		// use indexof to increase count variable
 		if (specialCharacters.indexOf(c) != -1) count++;
 	});
-	// use indexof to find numbers in array
-	// use indexof and lastIndexOf to make sure there's only one special characters
-	// return true if both conditions are false
 
+	// return true if both conditions are false
 	return true;
 };
