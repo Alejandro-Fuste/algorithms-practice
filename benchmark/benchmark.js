@@ -35,3 +35,13 @@ suite
 	})
 	// Run the test!
 	.run();
+
+/* 
+	.on('complete', function() {
+		this.forEach(result =>
+			console.log(
+			  `${result.name} averaged ${result.stats.mean * 1000} milliseconds.`
+			)
+		  );
+		})
+*/
