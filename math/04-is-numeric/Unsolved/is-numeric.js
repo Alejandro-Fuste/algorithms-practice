@@ -1,7 +1,8 @@
 // Write code to create a function that accepts a string and determines if the string is a valid number. You may not use any regex, built-in methods type conversion to accomplish this.
 
 var isNumeric = function(str) {
-	// setup object to hold array for digits and special characters
+	// setup object to hold true values for numbers
+	const numbers = { 0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true };
 };
 
 console.log(isNumeric('-0123.00')); // => true
