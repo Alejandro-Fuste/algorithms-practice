@@ -17,6 +17,9 @@ var isNumeric = function(str) {
 		if (specialCharacters.indexOf(c) != -1) count++;
 	});
 
+	// return false if more than one special character
+	if (count > 1) return false;
+
 	// return true if both conditions are false
 	return true;
 };
