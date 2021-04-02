@@ -7,7 +7,10 @@ var isNumeric = function(str) {
 		specialCharacters: [ '.', '+', '-' ]
 	};
 	// split and loop through arrays
+	str.split('');
 	// use indexof to find numbers in array
 	// use indexof and lastIndexOf to make sure there's only one special characters
 	// return true if both conditions are false
+
+	return true;
 };
