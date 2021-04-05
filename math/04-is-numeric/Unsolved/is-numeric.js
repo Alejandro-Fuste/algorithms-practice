@@ -7,10 +7,9 @@ var isNumeric = function(str) {
 	let hasNum = false;
 	let hasDecimal = false;
 
-	if (!str.length) return false;
-
 	for (let i = 0; i < str.length; i++) {
-		if (str[0] === '+' || str[0] === '-') continue;
+		if (str[0]) !hasNum;
+		// if (str[0] === '+' || str[0] === '-') continue;
 	}
 
 	return false;
