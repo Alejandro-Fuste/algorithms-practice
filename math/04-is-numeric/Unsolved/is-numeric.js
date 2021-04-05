@@ -8,14 +8,24 @@ var isNumeric = function(str) {
 	let hasDecimal = false;
 
 	for (let i = 0; i < str.length; i++) {
-		if (str[0]) !hasNum;
+		let char = str[i];
+		if (str[0]) {
+		}
 		if (str[0] === '+' || str[0] === '-') continue;
 
 		if (str[i] === '.') {
-			!hasDecimal;
+			hasDecimal = !hasDecimal;
+			continue;
+		}
+
+		if (str[i]) {
+			hasNum = true;
 			continue;
 		}
 	}
+	console.log(hasNum, hasDecimal);
+
+	if (hasNum && hasDecimal) return true;
 
 	return false;
 };
