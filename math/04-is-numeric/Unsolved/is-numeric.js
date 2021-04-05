@@ -9,7 +9,12 @@ var isNumeric = function(str) {
 
 	for (let i = 0; i < str.length; i++) {
 		if (str[0]) !hasNum;
-		// if (str[0] === '+' || str[0] === '-') continue;
+		if (str[0] === '+' || str[0] === '-') continue;
+
+		if (str[i] === '.') {
+			!hasDecimal;
+			continue;
+		}
 	}
 
 	return false;
