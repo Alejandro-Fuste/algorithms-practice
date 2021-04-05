@@ -19,8 +19,12 @@ var isNumeric = function(str) {
 
 		if (str[0] === '+' || str[0] === '-') continue;
 
-		if (str[i] === '.') {
-			hasDecimal = !hasDecimal;
+		if (char === '.') {
+			if (hasDecimal) {
+				return false;
+			}
+
+			hasDecimal = true;
 			continue;
 		}
 
