@@ -7,6 +7,8 @@ var isNumeric = function(str) {
 	if (!str.length) return false;
 
 	for (let i = 0; i < str.length; i++) {}
+
+	return false;
 };
 
 console.log(isNumeric('-0123.00')); // => true
