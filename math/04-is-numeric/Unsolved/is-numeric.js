@@ -5,6 +5,8 @@ var isNumeric = function(str) {
 	const numbers = { 0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true };
 
 	if (!str.length) return false;
+
+	for (let i = 0; i < str.length; i++) {}
 };
 
 console.log(isNumeric('-0123.00')); // => true
