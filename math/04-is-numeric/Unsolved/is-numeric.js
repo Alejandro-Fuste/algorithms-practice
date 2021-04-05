@@ -1,6 +1,6 @@
 // Write code to create a function that accepts a string and determines if the string is a valid number. You may not use any regex, built-in methods type conversion to accomplish this.
 
-const { has } = require('benchmark');
+// const { has } = require('benchmark');
 
 var isNumeric = function(str) {
 	// setup object to hold true values for numbers
@@ -11,16 +11,21 @@ var isNumeric = function(str) {
 
 	for (let i = 0; i < str.length; i++) {
 		let char = str[i];
+		console.log(char);
 
 		if (numbers[char]) {
 			hasNum = true;
 			continue;
 		}
 
-		if (str[0] === '+' || str[0] === '-') continue;
+		if (i === 0) {
+			if (char === '+' || char === '-') {
+				continue;
+			}
+		}
 
 		if (char === '.') {
-			if (hasDecimal) {
+			if (hasDecimal === true) {
 				return false;
 			}
 
@@ -28,18 +33,12 @@ var isNumeric = function(str) {
 			continue;
 		}
 
-		if (str[i]) {
-			hasNum = true;
-			continue;
-		}
+		return false;
 	}
-	console.log(hasNum, hasDecimal);
 
-	if (hasNum && hasDecimal) return true;
+	if (hasNum) return true;
 
 	return false;
 };
 
-console.log(isNumeric('-0123.00')); // => true
-console.log(isNumeric('+-a13')); // => false
-console.log(isNumeric('')); // => false
+console.log(isNumeric('.48')); // => true
