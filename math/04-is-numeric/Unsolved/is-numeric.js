@@ -4,9 +4,14 @@ var isNumeric = function(str) {
 	// setup object to hold true values for numbers
 	const numbers = { 0: true, 1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true, 9: true };
 
+	let hasNum = false;
+	let hasDecimal = false;
+
 	if (!str.length) return false;
 
-	for (let i = 0; i < str.length; i++) {}
+	for (let i = 0; i < str.length; i++) {
+		if (str[0] === '+' || str[0] === '-') continue;
+	}
 
 	return false;
 };
