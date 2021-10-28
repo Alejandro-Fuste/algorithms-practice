@@ -7,10 +7,12 @@
 // right child: i * 2 + 1
 
 let MaxHeap = function () {
-  let heap = [null, 1, 2, 3];
+  let heap = [null];
 
   // print method
   this.print = () => console.log(heap);
+
+  // insert method
 };
 
 let test = new MaxHeap();
