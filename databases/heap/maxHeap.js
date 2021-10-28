@@ -13,6 +13,13 @@ let MaxHeap = function () {
   this.print = () => console.log(heap);
 
   // insert method
+  this.insert = function (num) {
+    heap.push(num);
+
+    if (heap.length > 2) {
+      let index = heap.length - 1;
+    }
+  };
 };
 
 let test = new MaxHeap();
