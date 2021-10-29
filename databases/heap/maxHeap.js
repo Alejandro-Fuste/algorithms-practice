@@ -9,10 +9,10 @@
 let MaxHeap = function () {
   let heap = [null];
 
-  // print method
+  /**** print method ****/
   this.print = () => console.log(heap);
 
-  // insert method
+  /**** insert method ****/
   this.insert = function (num) {
     // push num to the end of the heap array
     heap.push(num);
@@ -41,6 +41,9 @@ let MaxHeap = function () {
       }
     }
   };
+
+  /**** remove method ****/
+  this.remove = function () {};
 };
 
 let test = new MaxHeap();
