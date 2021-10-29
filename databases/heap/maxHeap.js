@@ -78,7 +78,12 @@ let MaxHeap = function () {
           break;
         }
       }
+    } else if (heap.length == 2) {
+      heap.splice(1, 1);
+    } else {
+      return null;
     }
+    return smallest;
   };
 };
 
