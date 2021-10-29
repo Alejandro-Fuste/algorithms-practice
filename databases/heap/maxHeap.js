@@ -89,6 +89,7 @@ let MaxHeap = function () {
       // only one element in the array...then take it out
       heap.splice(1, 1);
     } else {
+      // return null if there are no elements in array
       return null;
     }
     return smallest;
