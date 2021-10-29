@@ -72,7 +72,7 @@ let MaxHeap = function () {
           // set the index to the left node...set the index to the node that was on top
           i = 2 * i;
         } else {
-          // swap if right node is greater than the left node
+          // swap if right node is greater than the left node & set index to right node
           [heap[i], heap[right]] = [heap[right], heap[i]];
           i = 2 * i + 1;
         }
