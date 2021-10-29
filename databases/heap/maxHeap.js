@@ -43,7 +43,10 @@ let MaxHeap = function () {
   };
 
   /**** remove method ****/
-  this.remove = function () {};
+  this.remove = function () {
+    //   get the top node
+    let smallest = heap[1];
+  };
 };
 
 let test = new MaxHeap();
