@@ -63,6 +63,8 @@ let MaxHeap = function () {
       let i = 1;
       let left = 2 * i;
       let right = 2 * i + 1;
+
+      while (heap[i] <= heap[left] || heap[i] <= heap[right]) {}
     }
   };
 };
