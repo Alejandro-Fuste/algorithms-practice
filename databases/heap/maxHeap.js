@@ -79,6 +79,8 @@ let MaxHeap = function () {
         // set the new left & right node of the number that was just moved down
         left = 2 * i;
         right = 2 * i + 1;
+
+        // break out of loop when at the bottom of the tree
         if (heap[left] == undefined || heap[right] == undefined) {
           break;
         }
