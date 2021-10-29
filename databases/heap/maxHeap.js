@@ -66,8 +66,10 @@ let MaxHeap = function () {
 
       // if top node is smaller than the children, then move it down the tree
       while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
+        // swap parent node with child...this is the moving down part
         if (heap[left] > heap[right]) {
           [heap[i], heap[left]] = [heap[left], heap[i]];
+          // set the index to the left node...set the index to the node that was on top
           i = 2 * i;
         } else {
           [heap[i], heap[right]] = [heap[right], heap[i]];
