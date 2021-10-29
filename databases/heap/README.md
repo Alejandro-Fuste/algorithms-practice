@@ -14,9 +14,16 @@ Max Heap: is where the parent is always greater than any of its children
 
 ## Index Structure
 
-<!-- | Node    | Index |
-| ----------- | ----------- |
-| (itself)     | N      |
-| Parent   | (N-1) / 2      |
-| Left Child   | (N*2) + 1 |
-| Right Child  | (N*2) + 2 | -->
+| Node        | Index           |
+| ----------- | --------------- |
+| (itself)    | i               |
+| Parent      | Math.floor(i/2) |
+| Left Child  | i \* 2          |
+| Right Child | i \* 2 + 1      |
+
+## Methods :shit:
+
+1. Print
+2. Insert
+3. Remove
+4. Sort
