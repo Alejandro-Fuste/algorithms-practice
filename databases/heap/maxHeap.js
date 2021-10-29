@@ -94,6 +94,8 @@ let MaxHeap = function () {
     }
     return smallest;
   };
+
+  /**** heap sort method ****/
 };
 
 let test = new MaxHeap();
