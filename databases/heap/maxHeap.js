@@ -96,7 +96,9 @@ let MaxHeap = function () {
   };
 
   /**** heap sort method ****/
+  // will sort greatest to least
   this.sort = function () {
+    // create new array
     let result = new Array();
     while (heap.length > 1) {
       result.push(this.remove());
