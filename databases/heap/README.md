@@ -10,7 +10,7 @@ Max Heap: is where the parent is always greater than any of its children
 
 ## Example
 
-<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/1024px-Max-Heap.svg.png' alt='example' style="background-color: white">
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/1024px-Max-Heap.svg.png' alt='example' style="background-color:white">
 
 ## Index Structure
 
@@ -21,7 +21,7 @@ Max Heap: is where the parent is always greater than any of its children
 | Left Child  | i \* 2          |
 | Right Child | i \* 2 + 1      |
 
-## Methods :shit:
+## Methods
 
 1. Print
 2. Insert
