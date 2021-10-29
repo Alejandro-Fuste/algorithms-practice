@@ -105,9 +105,17 @@ let MaxHeap = function () {
     while (heap.length > 1) {
       result.push(this.remove());
     }
+    console.log(result);
     return result;
   };
 };
 
 let test = new MaxHeap();
-test.print();
+test.insert(6);
+test.insert(5);
+test.insert(4);
+test.insert(3);
+test.insert(10);
+test.insert(2);
+test.insert(11);
+test.sort();
