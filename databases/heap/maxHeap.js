@@ -14,18 +14,24 @@ let MaxHeap = function () {
 
   // insert method
   this.insert = function (num) {
+    // push num to the end of the heap array
     heap.push(num);
 
+    // more than one item in heap if length is greater than two
     if (heap.length > 2) {
+      // find last index from heap array
       let index = heap.length - 1;
 
+      // loop will continue as long as the num we just pushed is greater than parent node
       while (heap[index] > heap[Math.floor(index / 2)]) {
+        // if we haven't reached the root node, then swap
         if (index >= 1) {
+          // swap with array destructing
           [heap[Math.floor(index / 2)], heap[index]] = [
             heap[index],
             heap[Math.floor(index / 2)],
           ];
-
+          //   if parent node is not the root node, then set the index to the parent node
           if (Math.floor(index / 2) > 1) {
             index = Math.floor(index / 2);
           } else {
