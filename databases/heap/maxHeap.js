@@ -59,6 +59,10 @@ let MaxHeap = function () {
         }
         return smallest;
       }
+      // if more than two nodes in array, then create equations for parent, right & left child
+      let i = 1;
+      let left = 2 * i;
+      let right = 2 * i + 1;
     }
   };
 };
