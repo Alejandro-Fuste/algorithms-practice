@@ -46,6 +46,12 @@ let MaxHeap = function () {
   this.remove = function () {
     //   get the top node
     let smallest = heap[1];
+
+    // if more than one node in the tree, then move last node to the top
+    if (heap.length > 2) {
+      heap[1] = heap[heap.length - 1];
+      heap.splice(heap.length - 1);
+    }
   };
 };
 
