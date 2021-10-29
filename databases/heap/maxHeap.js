@@ -100,6 +100,8 @@ let MaxHeap = function () {
   this.sort = function () {
     // create new array
     let result = new Array();
+
+    // loop will remove number from top of tree and push it to new array
     while (heap.length > 1) {
       result.push(this.remove());
     }
