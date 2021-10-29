@@ -96,6 +96,13 @@ let MaxHeap = function () {
   };
 
   /**** heap sort method ****/
+  this.sort = function () {
+    let result = new Array();
+    while (heap.length > 1) {
+      result.push(this.remove());
+    }
+    return result;
+  };
 };
 
 let test = new MaxHeap();
