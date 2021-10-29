@@ -64,6 +64,7 @@ let MaxHeap = function () {
       let left = 2 * i;
       let right = 2 * i + 1;
 
+      // if top node is smaller than the children, then move it down the tree
       while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
         if (heap[left] > heap[right]) {
           [heap[i], heap[left]] = [heap[left], heap[i]];
