@@ -47,10 +47,18 @@ let MaxHeap = function () {
     //   get the top node
     let smallest = heap[1];
 
-    // if more than one node in the tree, then move last node to the top
+    // if more than one node in the tree, then move last node to the top and remove last node
     if (heap.length > 2) {
       heap[1] = heap[heap.length - 1];
       heap.splice(heap.length - 1);
+
+      // if only two numbers in array, then swap the numbers to have the greater number on top
+      if (heap.length == 3) {
+        if (heap[1] < heap[2]) {
+          [heap[1], heap[2]] = [heap[2], heap[1]];
+        }
+        return smallest;
+      }
     }
   };
 };
