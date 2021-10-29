@@ -86,6 +86,7 @@ let MaxHeap = function () {
         }
       }
     } else if (heap.length == 2) {
+      // only one element in the array...then take it out
       heap.splice(1, 1);
     } else {
       return null;
